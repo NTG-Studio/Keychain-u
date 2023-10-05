@@ -3,7 +3,37 @@ guid: e3c625b412fa8a74994083c6e21255d8
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stairs
+    second: {fileID: 2100000, guid: 2c5389cf0654fcb44bf2ec38a5b74449, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StairsWall
+    second: {fileID: 2100000, guid: 2ba68063b3fa38b458be8a1c2387c24b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallBottom
+    second: {fileID: 2100000, guid: ee0c739956fbb7f43834ab4e00b1d773, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallTop
+    second: {fileID: 2100000, guid: aa7775d0fe70e274380f3c2aa6728d41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floor
+    second: {fileID: 2100000, guid: 63ab7274826fd5046ae4f235cf427eab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wallWoodTrim
+    second: {fileID: 2100000, guid: c2e6fc04f9be1274cb0c787753a8e162, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

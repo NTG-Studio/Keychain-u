@@ -12,6 +12,7 @@ public class cameraManager : MonoBehaviour
     {
         if (other.tag == "camZone")
         {
+            Debug.Log("hit " + other.name );
             cameraZone zone = other.gameObject.GetComponent<cameraZone>();
             if (currentCamera != null)
             {
