@@ -7,6 +7,26 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: DarkTrim
+    second: {fileID: 2100000, guid: 398dccdae8ebecc4ea3ff86b9f13423f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DarkWood
+    second: {fileID: 2100000, guid: 1e1224b48f92ca643bfc8b261266bad6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FrontDoorShelf
+    second: {fileID: 2100000, guid: bca92be316dc5d749b236e72ee91a898, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FrontDoorTable
+    second: {fileID: 2100000, guid: ad7a901cb3374fd45a05610e64f65797, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Stairs
     second: {fileID: 2100000, guid: 2c5389cf0654fcb44bf2ec38a5b74449, type: 2}
   - first:
