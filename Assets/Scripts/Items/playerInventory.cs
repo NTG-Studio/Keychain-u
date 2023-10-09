@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 
 /// <summary>
@@ -14,7 +15,8 @@ public class playerInventory : MonoBehaviour
     /// the players full inventory
     /// </summary>
     [SerializeField] private List<itemSlot> slots;
-    
+
+    public item testItem;
     /// <summary>
     /// the item index of the currently equipped item, -1 means no item is equipped
     /// </summary>
@@ -158,5 +160,20 @@ public class playerInventory : MonoBehaviour
         s.itm = itm;
         s.stack = 1;
         slots.Add(s);
+    }
+
+    /// <summary>
+    /// just gets the number of items in the inventory
+    /// </summary>
+    /// <returns>the count of items</returns>
+    public int getCount()
+    {
+        return slots.Count;
+    }
+
+    [Button]
+    public void addTestItem()
+    {
+        addNewItem(testItem);
     }
 }
