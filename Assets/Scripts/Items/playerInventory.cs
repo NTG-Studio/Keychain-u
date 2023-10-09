@@ -176,4 +176,14 @@ public class playerInventory : MonoBehaviour
     {
         addNewItem(testItem);
     }
+
+    /// <summary>
+    /// gets the item at "index" and returns it
+    /// </summary>
+    /// <param name="index">the index to pull from</param>
+    /// <returns>an item slot</returns>
+    public itemSlot getItemByIndex(int index)
+    {
+        return slots[index];
+    }
 }

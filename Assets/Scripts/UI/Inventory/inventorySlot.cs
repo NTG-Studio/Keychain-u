@@ -42,6 +42,11 @@ public class inventorySlot : MonoBehaviour
     [SerializeField] private playerInventory p_inventory;
 
     /// <summary>
+    /// the ui manager to determine what item we are currently grabbing
+    /// </summary>
+    [SerializeField] private inventoryUIManager ui_manager;
+
+    /// <summary>
     /// 
     /// </summary>
     [SerializeField] private item current_item;
@@ -59,6 +64,12 @@ public class inventorySlot : MonoBehaviour
         {
             p_inventory = GameObject.FindObjectOfType<playerInventory>();
         }
+
+        if (ui_manager == null)
+        {
+            ui_manager = GameObject.FindObjectOfType<inventoryUIManager>();
+        }
+        updateItem();
     }
 
     // Update is called once per frame
@@ -112,6 +123,7 @@ public class inventorySlot : MonoBehaviour
         {
             slotTarget--;
         }
+        updateItem();
     }
 
 
@@ -129,6 +141,7 @@ public class inventorySlot : MonoBehaviour
         {
             slotTarget++;
         }
+        updateItem();
     }
     
     /// <summary>
@@ -136,7 +149,10 @@ public class inventorySlot : MonoBehaviour
     /// </summary>
     public void updateItem()
     {
-        
+        if (p_inventory.getCount() > 0)
+        {
+            current_item = p_inventory.getItemByIndex(ui_manager.getIndex(slotTarget)).itm;
+        }
     }
 }
 

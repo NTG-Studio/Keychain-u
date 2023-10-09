@@ -74,14 +74,21 @@ public class inventoryUIManager : MonoBehaviour
     /// </summary>
     private void processSlot(int index)
     {
-        if (displayItems[index] < 0)
-        {
-            displayItems[index] = p_inventory.getCount() - 1;
-        }
-
-        if (displayItems[index] >= p_inventory.getCount())
+        if(p_inventory.getCount()==1)
         {
             displayItems[index] = 0;
+        }
+        else
+        {
+            if (displayItems[index] < 0)
+            {
+                displayItems[index] = p_inventory.getCount() - 1;
+            }
+
+            if (displayItems[index] >= p_inventory.getCount())
+            {
+                displayItems[index] = 0;
+            }
         }
     }
 
@@ -92,7 +99,7 @@ public class inventoryUIManager : MonoBehaviour
     /// <returns>is the slot in range or nah?</returns>
     private bool slotInRange(int index)
     {
-        if (displayItems[index] > 0 && displayItems[index] < p_inventory.getCount())
+        if (displayItems[index] >= 0 && displayItems[index] < p_inventory.getCount())
         {
             return true;
         }
@@ -132,5 +139,15 @@ public class inventoryUIManager : MonoBehaviour
             }
             processSlots();
         }
+    }
+
+    /// <summary>
+    /// gets a value out of slots
+    /// </summary>
+    /// <param name="slot">the index to pull from</param>
+    /// <returns>the item index</returns>
+    public int getIndex(int slot)
+    {
+        return displayItems[slot];
     }
 }
