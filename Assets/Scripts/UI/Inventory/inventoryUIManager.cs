@@ -9,6 +9,8 @@ public class inventoryUIManager : MonoBehaviour
     [SerializeField] private List<int> displayItems;
     [SerializeField] private playerInventory p_inventory;
     [SerializeField] private bool playerInventoryEmpty = false;
+    [SerializeField] private bool inventoryVisible = false;
+    [SerializeField] private Animator InventoryAnim ;
 
     [Header("Events")] 
     [SerializeField] public UnityEvent scrollLeft;
@@ -31,6 +33,13 @@ public class inventoryUIManager : MonoBehaviour
         {
             playerInventoryEmpty = false;
         }
+
+        if (Input.GetKeyUp(KeyCode.Tab))
+        {
+            inventoryVisible = !inventoryVisible;
+        }
+        
+        InventoryAnim.SetBool("inventoryVisible",inventoryVisible);
     }
 
     /// <summary>
