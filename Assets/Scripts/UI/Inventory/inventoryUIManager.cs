@@ -13,33 +13,11 @@ public class inventoryUIManager : MonoBehaviour
     [Header("Events")] 
     [SerializeField] public UnityEvent scrollLeft;
     [SerializeField] public UnityEvent scrollRight;
+    [SerializeField] public UnityEvent refresh;
     // Start is called before the first frame update
     void Start()
     {
-        displayItems = new List<int>();
-        displayItems.Add(0);
-        displayItems.Add(1);
-        displayItems.Add(2);
-        displayItems.Add(3);
-        displayItems.Add(4);
-        displayItems.Add(5);
-        displayItems.Add(7);
-        
-        if (p_inventory == null)
-        {
-            p_inventory = GameObject.FindObjectOfType<playerInventory>();
-        }
-        
-        if (p_inventory.getCount() == 0)
-        {
-            playerInventoryEmpty = true;
-        }
-        else
-        {
-            playerInventoryEmpty = false;
-        }
-        
-        processSlots();
+       RefreshAll();
     }
 
     // Update is called once per frame
@@ -116,7 +94,7 @@ public class inventoryUIManager : MonoBehaviour
     /// moves all slots one to the left
     /// </summary>
     [Button]
-    public void moveLeft()
+    public void moveRight()
     {
         if (!playerInventoryEmpty)
         {
@@ -136,7 +114,7 @@ public class inventoryUIManager : MonoBehaviour
     /// moves all slots one to the right
     /// </summary>
     [Button]
-    public void moveRight()
+    public void moveLeft()
     {
         if (!playerInventoryEmpty)
         {
@@ -160,5 +138,38 @@ public class inventoryUIManager : MonoBehaviour
     public int getIndex(int slot)
     {
         return displayItems[slot];
+    }
+
+    public void RefreshAll()
+    {
+        displayItems = new List<int>();
+        displayItems.Add(0);
+        displayItems.Add(1);
+        displayItems.Add(2);
+        displayItems.Add(3);
+        displayItems.Add(4);
+        displayItems.Add(5);
+        displayItems.Add(7);
+        
+        if (p_inventory == null)
+        {
+            p_inventory = GameObject.FindObjectOfType<playerInventory>();
+        }
+        
+        if (p_inventory.getCount() == 0)
+        {
+            playerInventoryEmpty = true;
+        }
+        else
+        {
+            playerInventoryEmpty = false;
+        }
+        
+        processSlots();
+
+        if (refresh != null)
+        {
+            refresh.Invoke();
+        }
     }
 }

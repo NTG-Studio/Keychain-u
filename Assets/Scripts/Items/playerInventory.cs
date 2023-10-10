@@ -17,11 +17,16 @@ public class playerInventory : MonoBehaviour
     [SerializeField] private List<itemSlot> slots;
 
     public int count = 0;
-    public item testItem;
+    public item[] testItem;
     /// <summary>
     /// the item index of the currently equipped item, -1 means no item is equipped
     /// </summary>
     [SerializeField] private int equipped_index = -1;
+
+    /// <summary>
+    /// a reference to the ui manager so we can refresh everything
+    /// </summary>
+    [SerializeField] private inventoryUIManager manager;
 
 
     private void Start()
@@ -103,6 +108,15 @@ public class playerInventory : MonoBehaviour
                 {
                     //there is not additional room in the stack, add a new item
                     addNewItem(itm);
+                    if (manager == null)
+                    {
+                        manager = GameObject.FindObjectOfType<inventoryUIManager>();
+                    }
+
+                    if (manager != null)
+                    {
+                        manager.RefreshAll();
+                    }
                     return true;
                     //TODO: add additional flag for if the player should be able to add another stack or not
                 }
@@ -110,6 +124,15 @@ public class playerInventory : MonoBehaviour
             else
             {
                 //as of right now this should not be reachable
+                if (manager == null)
+                {
+                    manager = GameObject.FindObjectOfType<inventoryUIManager>();
+                }
+
+                if (manager != null)
+                {
+                    manager.RefreshAll();
+                }
                 return false;
             }
         }
@@ -126,6 +149,15 @@ public class playerInventory : MonoBehaviour
         if (index == -1)
         {
             //was not able to find the item
+            if (manager == null)
+            {
+                manager = GameObject.FindObjectOfType<inventoryUIManager>();
+            }
+
+            if (manager != null)
+            {
+                manager.RefreshAll();
+            }
             return false;
         }
         else
@@ -151,7 +183,16 @@ public class playerInventory : MonoBehaviour
             {
                 //item is not stackable so remove the whole thing
                 slots.RemoveAt(index);
-                return false;
+                if (manager == null)
+                {
+                    manager = GameObject.FindObjectOfType<inventoryUIManager>();
+                }
+
+                if (manager != null)
+                {
+                    manager.RefreshAll();
+                }
+                return true;
             }
         }
     }
@@ -166,6 +207,15 @@ public class playerInventory : MonoBehaviour
         s.itm = itm;
         s.stack = 1;
         slots.Add(s);
+        if (manager == null)
+        {
+            manager = GameObject.FindObjectOfType<inventoryUIManager>();
+        }
+
+        if (manager != null)
+        {
+            manager.RefreshAll();
+        }
     }
 
     /// <summary>
@@ -180,7 +230,10 @@ public class playerInventory : MonoBehaviour
     [Button]
     public void addTestItem()
     {
-        addNewItem(testItem);
+        foreach (item i in testItem)
+        {
+            addNewItem(i);
+        }
     }
 
     /// <summary>

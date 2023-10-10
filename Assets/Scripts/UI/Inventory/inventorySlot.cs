@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using NaughtyAttributes;
+using Nova;
 using UnityEngine;
 
 public class inventorySlot : MonoBehaviour
@@ -51,6 +52,21 @@ public class inventorySlot : MonoBehaviour
     /// the current item held by this slot
     /// </summary>
     [SerializeField] private item current_item;
+
+    /// <summary>
+    /// a link to the image to apply the sprite texture to 
+    /// </summary>
+    [SerializeField] private UIBlock2D novaUIImage;
+
+    /// <summary>
+    /// data for the items name display
+    /// </summary>
+    [SerializeField] private TextBlock itemName;
+    
+    /// <summary>
+    /// data for the items description
+    /// </summary>
+    [SerializeField] private TextBlock itemDescription;
     // Start is called before the first frame update
     void Start()
     {
@@ -100,6 +116,8 @@ public class inventorySlot : MonoBehaviour
         }
 
         transform.localScale = smoothLerp(transform.localScale, targetScale, 15f);
+        
+        updateImage();
     }
 
     /// <summary>
@@ -118,7 +136,7 @@ public class inventorySlot : MonoBehaviour
     /// moves the object one slot to the left
     /// </summary>
     [Button]
-    public void moveLeft()
+    public void moveRight()
     {
         if (slotTarget == 0)
         {
@@ -136,7 +154,7 @@ public class inventorySlot : MonoBehaviour
     /// moves the object one slot to the right
     /// </summary>
     [Button]
-    public void moveRight()
+    public void moveLeft()
     {
         if (slotTarget > numberOfSlots-1)
         {
@@ -159,6 +177,7 @@ public class inventorySlot : MonoBehaviour
             try
             {
                 current_item = p_inventory.getItemByIndex(ui_manager.getIndex(slotTarget)).itm;
+                updateImage();
             }
             catch (Exception e)
             {
@@ -167,6 +186,50 @@ public class inventorySlot : MonoBehaviour
             }
             
         }
+        else
+        {
+            updateImage();
+        }
+    }
+
+    /// <summary>
+    /// apply the image to the ui block
+    /// </summary>
+    private void updateImage()
+    {
+        if (novaUIImage == null)
+        {
+            novaUIImage = GetComponent<UIBlock2D>();
+        }
+
+        //if setting succeeded
+        if (novaUIImage != null)
+        {
+            if (current_item != null)
+            {
+                novaUIImage.SetImage(current_item.image);
+                novaUIImage.Color = new Color(1, 1, 1, 1);
+            }
+            else
+            {
+                novaUIImage.Color = new Color(0, 0, 0, 0);
+            }
+        }
+
+        if (current_item != null)
+        {
+            if (slotTarget == 3)
+            {
+                itemName.Text = current_item.item_name;
+                itemDescription.Text = current_item.description;
+            }
+        }
+    }
+
+    public void refresh()
+    {
+        Debug.Log("refresh");
+        updateItem();
     }
 }
 

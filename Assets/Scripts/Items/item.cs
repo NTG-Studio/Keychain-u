@@ -8,7 +8,7 @@ public class item : ScriptableObject
     public string item_name;
     public int id;
     public string description;
-    public Texture2D image;
+    public Sprite image;
 
     [Header("flags")] 
     public bool usable;
