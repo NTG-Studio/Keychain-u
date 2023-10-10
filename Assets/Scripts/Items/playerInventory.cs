@@ -16,6 +16,7 @@ public class playerInventory : MonoBehaviour
     /// </summary>
     [SerializeField] private List<itemSlot> slots;
 
+    public int count = 0;
     public item testItem;
     /// <summary>
     /// the item index of the currently equipped item, -1 means no item is equipped
@@ -30,6 +31,11 @@ public class playerInventory : MonoBehaviour
         {
             slots = new List<itemSlot>();
         }
+    }
+
+    private void Update()
+    {
+        count = getCount();
     }
 
     /// <summary>

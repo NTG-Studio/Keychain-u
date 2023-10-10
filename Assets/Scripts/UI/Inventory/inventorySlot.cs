@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using NaughtyAttributes;
@@ -47,7 +48,7 @@ public class inventorySlot : MonoBehaviour
     [SerializeField] private inventoryUIManager ui_manager;
 
     /// <summary>
-    /// 
+    /// the current item held by this slot
     /// </summary>
     [SerializeField] private item current_item;
     // Start is called before the first frame update
@@ -60,6 +61,10 @@ public class inventorySlot : MonoBehaviour
             slots.Add(GameObject.Find(slotPrefix + i).transform);
         }
 
+        //snap it to its position at start
+        transform.position = slots[slotTarget].position;
+        
+        //get references to managers
         if (p_inventory == null)
         {
             p_inventory = GameObject.FindObjectOfType<playerInventory>();
@@ -94,7 +99,7 @@ public class inventorySlot : MonoBehaviour
             }
         }
 
-        transform.localScale = smoothLerp(transform.localScale, targetScale, 25f);
+        transform.localScale = smoothLerp(transform.localScale, targetScale, 15f);
     }
 
     /// <summary>
@@ -133,7 +138,7 @@ public class inventorySlot : MonoBehaviour
     [Button]
     public void moveRight()
     {
-        if (slotTarget >= numberOfSlots)
+        if (slotTarget > numberOfSlots-1)
         {
             slotTarget = 0;
         }
@@ -151,7 +156,16 @@ public class inventorySlot : MonoBehaviour
     {
         if (p_inventory.getCount() > 0)
         {
-            current_item = p_inventory.getItemByIndex(ui_manager.getIndex(slotTarget)).itm;
+            try
+            {
+                current_item = p_inventory.getItemByIndex(ui_manager.getIndex(slotTarget)).itm;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            
         }
     }
 }

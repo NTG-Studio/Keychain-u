@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class inventoryUIManager : MonoBehaviour
 {
     [SerializeField] private List<int> displayItems;
-
     [SerializeField] private playerInventory p_inventory;
-
     [SerializeField] private bool playerInventoryEmpty = false;
+
+    [Header("Events")] 
+    [SerializeField] public UnityEvent scrollLeft;
+    [SerializeField] public UnityEvent scrollRight;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,7 +56,7 @@ public class inventoryUIManager : MonoBehaviour
     }
 
     /// <summary>
-    /// makes sure all slots stay in the range they should be
+    /// makes sure all slots stay in the range they should be which should be between 0 and the player inventory count
     /// </summary>
     private void processSlots()
     {
@@ -122,6 +125,10 @@ public class inventoryUIManager : MonoBehaviour
                 displayItems[i]--;
             }
             processSlots();
+            if (scrollLeft != null)
+            {
+                scrollLeft.Invoke();
+            }
         }
     }
 
@@ -138,6 +145,10 @@ public class inventoryUIManager : MonoBehaviour
                 displayItems[i]++;
             }
             processSlots();
+            if (scrollRight != null)
+            {
+                scrollRight.Invoke();
+            }
         }
     }
 
