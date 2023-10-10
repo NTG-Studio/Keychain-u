@@ -737,8 +737,8 @@ MonoBehaviour:
   ui_manager: {fileID: 0}
   current_item: {fileID: 0}
   novaUIImage: {fileID: 0}
-  itemName: {fileID: 0}
-  itemDescription: {fileID: 0}
+  itemName: {fileID: 669738732}
+  itemDescription: {fileID: 993985746}
 --- !u!114 &259368336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3044,8 +3044,8 @@ MonoBehaviour:
   ui_manager: {fileID: 0}
   current_item: {fileID: 0}
   novaUIImage: {fileID: 0}
-  itemName: {fileID: 0}
-  itemDescription: {fileID: 0}
+  itemName: {fileID: 669738732}
+  itemDescription: {fileID: 993985746}
 --- !u!114 &539595682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3841,8 +3841,8 @@ MonoBehaviour:
   ui_manager: {fileID: 0}
   current_item: {fileID: 0}
   novaUIImage: {fileID: 0}
-  itemName: {fileID: 0}
-  itemDescription: {fileID: 0}
+  itemName: {fileID: 669738732}
+  itemDescription: {fileID: 993985746}
 --- !u!114 &658402594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5778,8 +5778,8 @@ MonoBehaviour:
   ui_manager: {fileID: 0}
   current_item: {fileID: 0}
   novaUIImage: {fileID: 0}
-  itemName: {fileID: 0}
-  itemDescription: {fileID: 0}
+  itemName: {fileID: 669738732}
+  itemDescription: {fileID: 993985746}
 --- !u!1 &977991673
 GameObject:
   m_ObjectHideFlags: 0
@@ -8342,8 +8342,8 @@ MonoBehaviour:
   ui_manager: {fileID: 0}
   current_item: {fileID: 0}
   novaUIImage: {fileID: 0}
-  itemName: {fileID: 0}
-  itemDescription: {fileID: 0}
+  itemName: {fileID: 669738732}
+  itemDescription: {fileID: 993985746}
 --- !u!114 &1534552044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10326,8 +10326,8 @@ MonoBehaviour:
   ui_manager: {fileID: 0}
   current_item: {fileID: 0}
   novaUIImage: {fileID: 0}
-  itemName: {fileID: 0}
-  itemDescription: {fileID: 0}
+  itemName: {fileID: 669738732}
+  itemDescription: {fileID: 993985746}
 --- !u!114 &1702087365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13779,8 +13779,8 @@ MonoBehaviour:
   ui_manager: {fileID: 0}
   current_item: {fileID: 0}
   novaUIImage: {fileID: 0}
-  itemName: {fileID: 0}
-  itemDescription: {fileID: 0}
+  itemName: {fileID: 669738732}
+  itemDescription: {fileID: 993985746}
 --- !u!114 &1787196016
 MonoBehaviour:
   m_ObjectHideFlags: 0
