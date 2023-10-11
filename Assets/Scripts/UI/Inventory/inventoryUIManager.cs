@@ -49,16 +49,6 @@ public class inventoryUIManager : MonoBehaviour
         {
             playerInventoryEmpty = false;
         }
-
-        //open and close the inventory
-        if (Input.GetKeyUp(KeyCode.Tab))
-        {
-            inventoryVisible = !inventoryVisible;
-            if (inventoryVisible)
-            {
-                currentSelection = 0;
-            }
-        }
         
         InventoryAnim.SetBool("inventoryVisible",inventoryVisible);
 
@@ -367,16 +357,11 @@ public class inventoryUIManager : MonoBehaviour
     {
         if (inventoryVisible)
         {
-            if (Input.GetKeyUp(KeyCode.S))
-            {
-                currentSelection++;
-                updateSelection();
-            }
+            
 
             if (Input.GetKeyUp(KeyCode.W))
             {
-                currentSelection--;
-                updateSelectionUpward();
+                
             }
 
             if (currentSelection == InventoryUISelection.ScrollList)
@@ -391,31 +376,78 @@ public class inventoryUIManager : MonoBehaviour
                     moveLeft();
                 }
             }
-            inventoryAction();
         }
     }
 
+    public void scrollDown()
+    {
+        if (inventoryVisible)
+        {
+            currentSelection++;
+            updateSelection();
+        }
+    }
+
+    public void scrollUp()
+    {
+        if (inventoryVisible)
+        {
+            Debug.Log("up");
+            currentSelection--;
+            updateSelectionUpward();
+        }
+    }
+
+    public void scrollInventoryRight()
+    {
+        if (currentSelection == InventoryUISelection.ScrollList && inventoryVisible)
+        {
+            moveRight();
+        }
+    }
+    
+    public void scrollInventoryLeft()
+    {
+        if (currentSelection == InventoryUISelection.ScrollList && inventoryVisible)
+        {
+            moveLeft();
+        }
+    }
+    
     /// <summary>
     /// do the inventory action as determined by what is being pressed
     /// </summary>
-    private void inventoryAction()
+    public void inventoryAction()
     {
-        if (Input.GetKeyUp(KeyCode.E))
+        
+        switch (currentSelection)
         {
-            switch (currentSelection)
+            case InventoryUISelection.UseEquip:
+                break;
+            case InventoryUISelection.Discard:
+                p_inventory.removeItem(CurrentItem);
+                RefreshAll();
+                break;
+            case InventoryUISelection.Combine:
+                break;
+            case InventoryUISelection.ScrollList:
+                currentSelection = InventoryUISelection.UseEquip;
+                updateSelection();
+                break;
+        }
+        
+    }
+
+
+    public void openCloseInventory()
+    {
+        //open and close the inventory
+        if (Input.GetKeyUp(KeyCode.Tab))
+        {
+            inventoryVisible = !inventoryVisible;
+            if (inventoryVisible)
             {
-                case InventoryUISelection.UseEquip:
-                    break;
-                case InventoryUISelection.Discard:
-                    p_inventory.removeItem(CurrentItem);
-                    RefreshAll();
-                    break;
-                case InventoryUISelection.Combine:
-                    break;
-                case InventoryUISelection.ScrollList:
-                    currentSelection = InventoryUISelection.UseEquip;
-                    updateSelection();
-                    break;
+                currentSelection = 0;
             }
         }
     }

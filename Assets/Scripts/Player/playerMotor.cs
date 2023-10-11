@@ -31,7 +31,7 @@ public class playerMotor : MonoBehaviour
 
     void updateInput()
     {
-        input = smoothLerp(input,new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")),25f);
+        input=sys_input.instance.input;
     }
 
     void turn()
@@ -50,11 +50,5 @@ public class playerMotor : MonoBehaviour
         controller.Move(velocity);
         velocity = Vector3.zero;
     }
-
-    Vector3 smoothLerp(Vector3 from, Vector3 to, float sharpness)
-    {
-        return Vector3.Lerp(from, to, (1f * Mathf.Exp(-sharpness * Time.deltaTime)));
-    }
-
     
 }
