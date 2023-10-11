@@ -43,12 +43,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: WallTop
-    second: {fileID: 2100000, guid: aa7775d0fe70e274380f3c2aa6728d41, type: 2}
+    second: {fileID: 2100000, guid: 706ed3edd5d47d345a1b1455c1a0e3b4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: floor
-    second: {fileID: 2100000, guid: 63ab7274826fd5046ae4f235cf427eab, type: 2}
+    second: {fileID: 2100000, guid: 8e329b197a938834e9180bf99a426378, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
