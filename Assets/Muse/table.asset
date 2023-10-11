@@ -1,0 +1,1572 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 799809cba631448718307acd1df5bb43, type: 3}
+  m_Name: table
+  m_EditorClassIdentifier: 
+  guid: e9e41a41-a21d-49d0-a232-7a6b86948a45
+  assetsData:
+  - rid: 5584504487569522696
+  - rid: 5584504487569522703
+  - rid: 5584504487569522710
+  - rid: 5584504487569522717
+  - rid: 5584504487569522742
+  - rid: 5584504487569522749
+  - rid: 5584504487569522756
+  - rid: 5584504487569522763
+  - rid: 5584504487569522770
+  - rid: 5584504487569522777
+  - rid: 5584504487569522784
+  - rid: 5584504487569522791
+  - rid: 5584504487569522798
+  - rid: 5584504487569522805
+  - rid: 5584504487569522812
+  - rid: 5584504487569522819
+  currentMode: TextToImage
+  m_Data:
+  - rid: 5584504487569522688
+  - rid: 5584504487569522689
+  preRefinedArtifact:
+    rid: -2
+  refinedArtifact:
+    rid: -2
+  selectedArtifact:
+    rid: -2
+  m_Operators:
+  - rid: 5584504487569522690
+  - rid: 5584504487569522691
+  - rid: 5584504487569522692
+  - rid: 5584504487569522693
+  - rid: 5584504487569522694
+  - rid: 5584504487569522695
+  m_PreRefineOperators: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 5584504487569522688
+      type: {class: MainUI/UISize, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_NodeListWidth: 300
+        m_NodeListRefineWidth: 300
+        m_AssetListRefineWidth: 200
+    - rid: 5584504487569522689
+      type: {class: BookmarkManager, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_BookmarkedArtifacts:
+          m_Values: []
+        m_IsFilterEnabled: 0
+    - rid: 5584504487569522690
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522691
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - 'Finished wood for a table, aged  '
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522692
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - new, glossy
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522693
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522694
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 1
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522695
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522696
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: f9003e2b-3167-4784-a65d-684008f2972c
+        Seed: 3533603874
+        m_Operators:
+        - rid: 5584504487569522697
+        - rid: 5584504487569522698
+        - rid: 5584504487569522699
+        - rid: 5584504487569522700
+        - rid: 5584504487569522701
+        - rid: 5584504487569522702
+        history:
+        - rid: 5584504487569522696
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522697
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522698
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Finished wood for a table, aged over years worn and weathered, rough
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522699
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - new, glossy, perfect
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522700
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522701
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 1
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522702
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522703
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: fba0a448-776f-4f81-84a9-048dcdf29080
+        Seed: 579257328
+        m_Operators:
+        - rid: 5584504487569522704
+        - rid: 5584504487569522705
+        - rid: 5584504487569522706
+        - rid: 5584504487569522707
+        - rid: 5584504487569522708
+        - rid: 5584504487569522709
+        history:
+        - rid: 5584504487569522703
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522704
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522705
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Finished wood for a table, aged over years worn and weathered, rough
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522706
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - new, glossy, perfect
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522707
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522708
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 1
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522709
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522710
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 
+        Seed: 554590855
+        m_Operators:
+        - rid: 5584504487569522736
+        - rid: 5584504487569522737
+        - rid: 5584504487569522738
+        - rid: 5584504487569522739
+        - rid: 5584504487569522740
+        - rid: 5584504487569522741
+        history:
+        - rid: 5584504487569522710
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522717
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 12b7f4a1-164c-45ec-90d9-0f1adc8e45d9
+        Seed: 2183226753
+        m_Operators:
+        - rid: 5584504487569522718
+        - rid: 5584504487569522719
+        - rid: 5584504487569522720
+        - rid: 5584504487569522721
+        - rid: 5584504487569522722
+        - rid: 5584504487569522723
+        history:
+        - rid: 5584504487569522717
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522718
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522719
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Finished wood for a table, aged over years worn and weathered, rough
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522720
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - new, glossy, perfect
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522721
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522722
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 1
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522723
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522736
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522737
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Finished wood for a table, aged over years worn and weathered, rough
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522738
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - new, glossy, perfect
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522739
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522740
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 1
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522741
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522742
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: d04f8598-fdd1-4cc5-92fd-926c982823c8
+        Seed: 4107856834
+        m_Operators:
+        - rid: 5584504487569522743
+        - rid: 5584504487569522744
+        - rid: 5584504487569522745
+        - rid: 5584504487569522746
+        - rid: 5584504487569522747
+        - rid: 5584504487569522748
+        history:
+        - rid: 5584504487569522742
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522743
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522744
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - 'Finished wood for a table, aged over years '
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522745
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - new, glossy, perfect
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522746
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522747
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 1
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522748
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522749
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: bfa1b727-c536-439b-ab92-847091b5baf5
+        Seed: 3719724018
+        m_Operators:
+        - rid: 5584504487569522750
+        - rid: 5584504487569522751
+        - rid: 5584504487569522752
+        - rid: 5584504487569522753
+        - rid: 5584504487569522754
+        - rid: 5584504487569522755
+        history:
+        - rid: 5584504487569522749
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522750
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522751
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - 'Finished wood for a table, aged over years '
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522752
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - new, glossy, perfect
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522753
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522754
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 1
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522755
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522756
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: d9042a22-f38e-4933-9a54-05f6cf3458d9
+        Seed: 3644619433
+        m_Operators:
+        - rid: 5584504487569522757
+        - rid: 5584504487569522758
+        - rid: 5584504487569522759
+        - rid: 5584504487569522760
+        - rid: 5584504487569522761
+        - rid: 5584504487569522762
+        history:
+        - rid: 5584504487569522756
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522757
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522758
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - 'Finished wood for a table, aged over years '
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522759
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - new, glossy, perfect
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522760
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522761
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 1
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522762
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522763
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: fcb072ab-96f1-44b8-b586-c0fcc186e9e2
+        Seed: 1775753322
+        m_Operators:
+        - rid: 5584504487569522764
+        - rid: 5584504487569522765
+        - rid: 5584504487569522766
+        - rid: 5584504487569522767
+        - rid: 5584504487569522768
+        - rid: 5584504487569522769
+        history:
+        - rid: 5584504487569522763
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522764
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522765
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - 'Finished wood for a table, aged over years '
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522766
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - new, glossy, perfect
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522767
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522768
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 1
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522769
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522770
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: d534de74-63a6-4668-8b4b-86b20625950e
+        Seed: 1307503165
+        m_Operators:
+        - rid: 5584504487569522771
+        - rid: 5584504487569522772
+        - rid: 5584504487569522773
+        - rid: 5584504487569522774
+        - rid: 5584504487569522775
+        - rid: 5584504487569522776
+        history:
+        - rid: 5584504487569522770
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522771
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522772
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - 'Finished wood for a table, aged over years '
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522773
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - new, glossy
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522774
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522775
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 1
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522776
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522777
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 47052102-e9bd-4e46-b41e-fd3e87621cf2
+        Seed: 1853744736
+        m_Operators:
+        - rid: 5584504487569522778
+        - rid: 5584504487569522779
+        - rid: 5584504487569522780
+        - rid: 5584504487569522781
+        - rid: 5584504487569522782
+        - rid: 5584504487569522783
+        history:
+        - rid: 5584504487569522777
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522778
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522779
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - 'Finished wood for a table, aged over years '
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522780
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - new, glossy
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522781
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522782
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 1
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522783
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522784
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 5ab0da05-142b-4bb0-aaa0-82ad4ef32f71
+        Seed: 2587960890
+        m_Operators:
+        - rid: 5584504487569522785
+        - rid: 5584504487569522786
+        - rid: 5584504487569522787
+        - rid: 5584504487569522788
+        - rid: 5584504487569522789
+        - rid: 5584504487569522790
+        history:
+        - rid: 5584504487569522784
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522785
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522786
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - 'Finished wood for a table, aged over years '
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522787
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - new, glossy
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522788
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522789
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 1
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522790
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522791
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 6f1ca363-f2a3-4e9a-bf13-6b0780053310
+        Seed: 2305601426
+        m_Operators:
+        - rid: 5584504487569522792
+        - rid: 5584504487569522793
+        - rid: 5584504487569522794
+        - rid: 5584504487569522795
+        - rid: 5584504487569522796
+        - rid: 5584504487569522797
+        history:
+        - rid: 5584504487569522791
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522792
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522793
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - 'Finished wood for a table, aged over years '
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522794
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - new, glossy
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522795
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522796
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 1
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522797
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522798
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 
+        Seed: 0
+        m_Operators:
+        - rid: 5584504487569522799
+        - rid: 5584504487569522800
+        - rid: 5584504487569522801
+        - rid: 5584504487569522802
+        - rid: 5584504487569522803
+        - rid: 5584504487569522804
+        history:
+        - rid: 5584504487569522798
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522799
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522800
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - 'Finished wood for a table, aged  '
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522801
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - new, glossy
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522802
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522803
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 1
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522804
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522805
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 
+        Seed: 0
+        m_Operators:
+        - rid: 5584504487569522806
+        - rid: 5584504487569522807
+        - rid: 5584504487569522808
+        - rid: 5584504487569522809
+        - rid: 5584504487569522810
+        - rid: 5584504487569522811
+        history:
+        - rid: 5584504487569522805
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522806
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522807
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - 'Finished wood for a table, aged  '
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522808
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - new, glossy
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522809
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522810
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 1
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522811
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522812
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 
+        Seed: 0
+        m_Operators:
+        - rid: 5584504487569522813
+        - rid: 5584504487569522814
+        - rid: 5584504487569522815
+        - rid: 5584504487569522816
+        - rid: 5584504487569522817
+        - rid: 5584504487569522818
+        history:
+        - rid: 5584504487569522812
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522813
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522814
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - 'Finished wood for a table, aged  '
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522815
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - new, glossy
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522816
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522817
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 1
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522818
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522819
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 
+        Seed: 0
+        m_Operators:
+        - rid: 5584504487569522820
+        - rid: 5584504487569522821
+        - rid: 5584504487569522822
+        - rid: 5584504487569522823
+        - rid: 5584504487569522824
+        - rid: 5584504487569522825
+        history:
+        - rid: 5584504487569522819
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522820
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522821
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - 'Finished wood for a table, aged  '
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522822
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - new, glossy
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522823
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522824
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 1
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522825
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 

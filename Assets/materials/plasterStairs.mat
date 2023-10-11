@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-156139838726963037
+--- !u!114 &-785141801710880359
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: floor
+  m_Name: plasterStairs
   m_Shader: {fileID: -6465566751694194690, guid: 871005594d5834f569740429db10d6b4,
     type: 3}
   m_Parent: {fileID: 0}
@@ -38,27 +38,27 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AmbientOcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 8ada16bf4e983244bbc511dbb095205e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 09bcdf30c69b1fc47b3d36eeaf61c1a2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: d156113a0af45fe46bbdb4ad2e312a50, type: 3}
+        m_Texture: {fileID: 2800000, guid: e52603d56a459ef45a915394282e9535, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMap:
-        m_Texture: {fileID: 2800000, guid: fac6e1c86dd525a489ed0a56999d5602, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8f1dab7f82ce09c40a1ac4b1a29e665f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicMap:
-        m_Texture: {fileID: 2800000, guid: 41891a357f6b6434d9a423403eb3c95d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 69b0b411d53531f4da28166862a20245, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: b956e3355dc4b774a9fe1b871d0e5570, type: 3}
+        m_Texture: {fileID: 2800000, guid: 91675d72f20e33943bb064fedf17aaf9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RoughnessMap:
-        m_Texture: {fileID: 2800000, guid: edcafd3816cb39542a2992ab0a2ed0c5, type: 3}
+        m_Texture: {fileID: 2800000, guid: c20c2603349d36a419057ac8fe5e383b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -79,19 +79,19 @@ Material:
     - _BUILTIN_QueueOffset: 0
     - _FlipHorizontal: 0
     - _FlipVertical: 0
-    - _HeightIntensity: 0.5
-    - _MetallicIntensity: 0
+    - _HeightIntensity: 4
+    - _MetallicIntensity: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Rotation: 0
-    - _RoughnessIntensity: 2.01
+    - _RoughnessIntensity: 1
     - _TessellationFactor: 32
     - _UseDisplacement: 0
     m_Colors:
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
-    - _Tiling: {r: 2, g: 1, b: 0, a: 0}
+    - _Tiling: {r: 5, g: 5, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &5182215381126283073
+--- !u!114 &4693163517376508689
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

@@ -1,0 +1,844 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 799809cba631448718307acd1df5bb43, type: 3}
+  m_Name: finishedWood
+  m_EditorClassIdentifier: 
+  guid: 3c4bf976-91dd-4fc2-b53d-2a95a47eef1e
+  assetsData:
+  - rid: 5584504487569523049
+  - rid: 5584504487569523056
+  - rid: 5584504487569523063
+  - rid: 5584504487569523070
+  - rid: 5584504487569523077
+  - rid: 5584504487569523084
+  - rid: 5584504487569523091
+  - rid: 5584504487569523098
+  currentMode: TextToImage
+  m_Data:
+  - rid: 5584504487569523041
+  - rid: 5584504487569523042
+  preRefinedArtifact:
+    rid: -2
+  refinedArtifact:
+    rid: -2
+  selectedArtifact:
+    rid: -2
+  m_Operators:
+  - rid: 5584504487569523043
+  - rid: 5584504487569523044
+  - rid: 5584504487569523045
+  - rid: 5584504487569523046
+  - rid: 5584504487569523047
+  - rid: 5584504487569523048
+  m_PreRefineOperators: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 5584504487569523041
+      type: {class: MainUI/UISize, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_NodeListWidth: 300
+        m_NodeListRefineWidth: 300
+        m_AssetListRefineWidth: 200
+    - rid: 5584504487569523042
+      type: {class: BookmarkManager, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_BookmarkedArtifacts:
+          m_Values: []
+        m_IsFilterEnabled: 0
+    - rid: 5584504487569523043
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523044
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Freshly finished smooth dark oak wood for use in trim.
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523045
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - seams
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523046
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523047
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523048
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523049
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 4e64e8ba-c006-45cf-b8b8-70a2df44d675
+        Seed: 34934773
+        m_Operators:
+        - rid: 5584504487569523050
+        - rid: 5584504487569523051
+        - rid: 5584504487569523052
+        - rid: 5584504487569523053
+        - rid: 5584504487569523054
+        - rid: 5584504487569523055
+        history:
+        - rid: 5584504487569523049
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569523050
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523051
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Freshly finished wood for use in trim.
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523052
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - seams
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523053
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523054
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523055
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523056
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 0b766aba-c7c4-4b9a-b6e7-428fcdf365b8
+        Seed: 3588116159
+        m_Operators:
+        - rid: 5584504487569523057
+        - rid: 5584504487569523058
+        - rid: 5584504487569523059
+        - rid: 5584504487569523060
+        - rid: 5584504487569523061
+        - rid: 5584504487569523062
+        history:
+        - rid: 5584504487569523056
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569523057
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523058
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Freshly finished wood for use in trim.
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523059
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - seams
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523060
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523061
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523062
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523063
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 95c58268-ecd4-441b-9670-c904b75b3463
+        Seed: 582316972
+        m_Operators:
+        - rid: 5584504487569523064
+        - rid: 5584504487569523065
+        - rid: 5584504487569523066
+        - rid: 5584504487569523067
+        - rid: 5584504487569523068
+        - rid: 5584504487569523069
+        history:
+        - rid: 5584504487569523063
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569523064
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523065
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Freshly finished wood for use in trim.
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523066
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - seams
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523067
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523068
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523069
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523070
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: b6d21b89-1867-4a82-8424-d0d752da6c5c
+        Seed: 3532963880
+        m_Operators:
+        - rid: 5584504487569523071
+        - rid: 5584504487569523072
+        - rid: 5584504487569523073
+        - rid: 5584504487569523074
+        - rid: 5584504487569523075
+        - rid: 5584504487569523076
+        history:
+        - rid: 5584504487569523070
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569523071
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523072
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Freshly finished wood for use in trim.
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523073
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - seams
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523074
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523075
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523076
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523077
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 
+        Seed: 0
+        m_Operators:
+        - rid: 5584504487569523078
+        - rid: 5584504487569523079
+        - rid: 5584504487569523080
+        - rid: 5584504487569523081
+        - rid: 5584504487569523082
+        - rid: 5584504487569523083
+        history:
+        - rid: 5584504487569523077
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569523078
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523079
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Freshly finished smooth dark oak wood for use in trim.
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523080
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - seams
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523081
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523082
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523083
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523084
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 
+        Seed: 0
+        m_Operators:
+        - rid: 5584504487569523085
+        - rid: 5584504487569523086
+        - rid: 5584504487569523087
+        - rid: 5584504487569523088
+        - rid: 5584504487569523089
+        - rid: 5584504487569523090
+        history:
+        - rid: 5584504487569523084
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569523085
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523086
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Freshly finished smooth dark oak wood for use in trim.
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523087
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - seams
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523088
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523089
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523090
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523091
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 
+        Seed: 0
+        m_Operators:
+        - rid: 5584504487569523092
+        - rid: 5584504487569523093
+        - rid: 5584504487569523094
+        - rid: 5584504487569523095
+        - rid: 5584504487569523096
+        - rid: 5584504487569523097
+        history:
+        - rid: 5584504487569523091
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569523092
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523093
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Freshly finished smooth dark oak wood for use in trim.
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523094
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - seams
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523095
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523096
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523097
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523098
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 
+        Seed: 0
+        m_Operators:
+        - rid: 5584504487569523099
+        - rid: 5584504487569523100
+        - rid: 5584504487569523101
+        - rid: 5584504487569523102
+        - rid: 5584504487569523103
+        - rid: 5584504487569523104
+        history:
+        - rid: 5584504487569523098
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569523099
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523100
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Freshly finished smooth dark oak wood for use in trim.
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523101
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - seams
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523102
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523103
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523104
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 

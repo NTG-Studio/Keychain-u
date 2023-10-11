@@ -79,7 +79,7 @@ Material:
     - _BUILTIN_QueueOffset: 0
     - _FlipHorizontal: 0
     - _FlipVertical: 0
-    - _HeightIntensity: 4
+    - _HeightIntensity: 0.5
     - _MetallicIntensity: 1
     - _QueueControl: 0
     - _QueueOffset: 0

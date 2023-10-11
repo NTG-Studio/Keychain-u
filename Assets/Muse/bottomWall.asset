@@ -1,0 +1,2775 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 799809cba631448718307acd1df5bb43, type: 3}
+  m_Name: bottomWall
+  m_EditorClassIdentifier: 
+  guid: 25569ff0-68b2-489c-94ac-98a696df2ce9
+  assetsData:
+  - rid: 5584504487569522839
+  - rid: 5584504487569522846
+  - rid: 5584504487569522853
+  - rid: 5584504487569522860
+  - rid: 5584504487569522867
+  - rid: 5584504487569522874
+  - rid: 5584504487569522881
+  - rid: 5584504487569522888
+  - rid: 5584504487569522895
+  - rid: 5584504487569522902
+  - rid: 5584504487569522909
+  - rid: 5584504487569522916
+  - rid: 5584504487569522923
+  - rid: 5584504487569522930
+  - rid: 5584504487569522937
+  - rid: 5584504487569522944
+  - rid: 5584504487569522951
+  - rid: 5584504487569522958
+  - rid: 5584504487569522965
+  - rid: 5584504487569522972
+  - rid: 5584504487569522979
+  - rid: 5584504487569522982
+  - rid: 5584504487569522989
+  - rid: 5584504487569522996
+  - rid: 5584504487569523003
+  - rid: 5584504487569523010
+  - rid: 5584504487569523017
+  - rid: 5584504487569523024
+  - rid: 5584504487569523031
+  - rid: 5584504487569523038
+  currentMode: TextToImage
+  m_Data:
+  - rid: 5584504487569522831
+  - rid: 5584504487569522832
+  preRefinedArtifact:
+    rid: -2
+  refinedArtifact:
+    rid: -2
+  selectedArtifact:
+    rid: 5584504487569523010
+  m_Operators:
+  - rid: 5584504487569522833
+  - rid: 5584504487569522834
+  - rid: 5584504487569522835
+  - rid: 5584504487569522836
+  - rid: 5584504487569522837
+  - rid: 5584504487569522838
+  m_PreRefineOperators: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 5584504487569522831
+      type: {class: MainUI/UISize, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_NodeListWidth: 300
+        m_NodeListRefineWidth: 300
+        m_AssetListRefineWidth: 200
+    - rid: 5584504487569522832
+      type: {class: BookmarkManager, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_BookmarkedArtifacts:
+          m_Values: []
+        m_IsFilterEnabled: 0
+    - rid: 5584504487569522833
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522834
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - horizontal wooden planks. painted white, photorealistic, sharp, smooth
+            edges
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522835
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522836
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522837
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522838
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522839
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 4bf7c486-2832-46ea-8a42-860364b06bac
+        Seed: 4015547302
+        m_Operators:
+        - rid: 5584504487569522840
+        - rid: 5584504487569522841
+        - rid: 5584504487569522842
+        - rid: 5584504487569522843
+        - rid: 5584504487569522844
+        - rid: 5584504487569522845
+        history:
+        - rid: 5584504487569522839
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522840
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522841
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Vertical wooden slats for the bottom half of a wall.
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522842
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522843
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522844
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522845
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522846
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 86434000-17a9-4eed-aebf-15b7b91d3aec
+        Seed: 41392342
+        m_Operators:
+        - rid: 5584504487569522847
+        - rid: 5584504487569522848
+        - rid: 5584504487569522849
+        - rid: 5584504487569522850
+        - rid: 5584504487569522851
+        - rid: 5584504487569522852
+        history:
+        - rid: 5584504487569522846
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522847
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522848
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Vertical wooden slats for the bottom half of a wall.
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522849
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522850
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522851
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522852
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522853
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 7eb49409-213a-4ea7-a7d8-8c1df70b3400
+        Seed: 454455604
+        m_Operators:
+        - rid: 5584504487569522854
+        - rid: 5584504487569522855
+        - rid: 5584504487569522856
+        - rid: 5584504487569522857
+        - rid: 5584504487569522858
+        - rid: 5584504487569522859
+        history:
+        - rid: 5584504487569522853
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522854
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522855
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Vertical wooden slats for the bottom half of a wall.
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522856
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522857
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522858
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522859
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522860
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 95e78059-0900-48f0-926c-0723be1d9659
+        Seed: 3142515441
+        m_Operators:
+        - rid: 5584504487569522861
+        - rid: 5584504487569522862
+        - rid: 5584504487569522863
+        - rid: 5584504487569522864
+        - rid: 5584504487569522865
+        - rid: 5584504487569522866
+        history:
+        - rid: 5584504487569522860
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522861
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522862
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Vertical wooden slats for the bottom half of a wall.
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522863
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522864
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522865
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522866
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522867
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 85bc16f7-fc8b-496e-8e3a-5ae46a0ddd00
+        Seed: 3698008924
+        m_Operators:
+        - rid: 5584504487569522868
+        - rid: 5584504487569522869
+        - rid: 5584504487569522870
+        - rid: 5584504487569522871
+        - rid: 5584504487569522872
+        - rid: 5584504487569522873
+        history:
+        - rid: 5584504487569522867
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522868
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522869
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Vertical wooden slats for the bottom half of a wall. photorealistic,
+            sharp
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522870
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522871
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522872
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522873
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522874
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: d8aae018-0440-4fe8-896d-30e17c6cb590
+        Seed: 421430115
+        m_Operators:
+        - rid: 5584504487569522875
+        - rid: 5584504487569522876
+        - rid: 5584504487569522877
+        - rid: 5584504487569522878
+        - rid: 5584504487569522879
+        - rid: 5584504487569522880
+        history:
+        - rid: 5584504487569522874
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522875
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522876
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Vertical wooden slats for the bottom half of a wall. photorealistic,
+            sharp
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522877
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522878
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522879
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522880
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522881
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 23d34cc0-1edd-425d-96bb-efb03747a82c
+        Seed: 1426673768
+        m_Operators:
+        - rid: 5584504487569522882
+        - rid: 5584504487569522883
+        - rid: 5584504487569522884
+        - rid: 5584504487569522885
+        - rid: 5584504487569522886
+        - rid: 5584504487569522887
+        history:
+        - rid: 5584504487569522881
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522882
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522883
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Vertical wooden slats for the bottom half of a wall. photorealistic,
+            sharp
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522884
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522885
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522886
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522887
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522888
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 4229d196-7e27-4bf7-a38e-e4cbe510ec24
+        Seed: 3953270533
+        m_Operators:
+        - rid: 5584504487569522889
+        - rid: 5584504487569522890
+        - rid: 5584504487569522891
+        - rid: 5584504487569522892
+        - rid: 5584504487569522893
+        - rid: 5584504487569522894
+        history:
+        - rid: 5584504487569522888
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522889
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522890
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Vertical wooden slats for the bottom half of a wall. photorealistic,
+            sharp
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522891
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522892
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522893
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522894
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522895
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 3ae2a585-c52f-4c61-bad8-c007b3ee6047
+        Seed: 4082663622
+        m_Operators:
+        - rid: 5584504487569522896
+        - rid: 5584504487569522897
+        - rid: 5584504487569522898
+        - rid: 5584504487569522899
+        - rid: 5584504487569522900
+        - rid: 5584504487569522901
+        history:
+        - rid: 5584504487569522895
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522896
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522897
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Vertical wooden slats for the bottom half of a wall. photorealistic,
+            sharp, smooth edges
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522898
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522899
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522900
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522901
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522902
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 00ec8fd8-c70c-4fe5-87e5-7225ff902f32
+        Seed: 1022788333
+        m_Operators:
+        - rid: 5584504487569522903
+        - rid: 5584504487569522904
+        - rid: 5584504487569522905
+        - rid: 5584504487569522906
+        - rid: 5584504487569522907
+        - rid: 5584504487569522908
+        history:
+        - rid: 5584504487569522902
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522903
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522904
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Vertical wooden slats for the bottom half of a wall. photorealistic,
+            sharp, smooth edges
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522905
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522906
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522907
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522908
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522909
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: f52eae1b-ce26-4598-869d-0b0727d9ae07
+        Seed: 943414384
+        m_Operators:
+        - rid: 5584504487569522910
+        - rid: 5584504487569522911
+        - rid: 5584504487569522912
+        - rid: 5584504487569522913
+        - rid: 5584504487569522914
+        - rid: 5584504487569522915
+        history:
+        - rid: 5584504487569522909
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522910
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522911
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Vertical wooden slats for the bottom half of a wall. photorealistic,
+            sharp, smooth edges
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522912
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522913
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522914
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522915
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522916
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: ff497a47-154f-4cc0-ae2a-6ed213334dd4
+        Seed: 1077445451
+        m_Operators:
+        - rid: 5584504487569522917
+        - rid: 5584504487569522918
+        - rid: 5584504487569522919
+        - rid: 5584504487569522920
+        - rid: 5584504487569522921
+        - rid: 5584504487569522922
+        history:
+        - rid: 5584504487569522916
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522917
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522918
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Vertical wooden slats for the bottom half of a wall. photorealistic,
+            sharp, smooth edges
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522919
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522920
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522921
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522922
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522923
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: f9e81b4b-935c-49cc-836c-a35e97980b70
+        Seed: 2119228626
+        m_Operators:
+        - rid: 5584504487569522924
+        - rid: 5584504487569522925
+        - rid: 5584504487569522926
+        - rid: 5584504487569522927
+        - rid: 5584504487569522928
+        - rid: 5584504487569522929
+        history:
+        - rid: 5584504487569522923
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522924
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522925
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Vertical wooden planks for the bottom half of a wall. photorealistic,
+            sharp, smooth edges
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522926
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522927
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522928
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522929
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522930
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 2d46c7ec-320d-4c34-b612-b08bfa8fa319
+        Seed: 94224127
+        m_Operators:
+        - rid: 5584504487569522931
+        - rid: 5584504487569522932
+        - rid: 5584504487569522933
+        - rid: 5584504487569522934
+        - rid: 5584504487569522935
+        - rid: 5584504487569522936
+        history:
+        - rid: 5584504487569522930
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522931
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522932
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Vertical wooden planks for the bottom half of a wall. photorealistic,
+            sharp, smooth edges
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522933
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522934
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522935
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522936
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522937
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 116be268-efee-4d7d-9cbc-954cbf4d3072
+        Seed: 745520664
+        m_Operators:
+        - rid: 5584504487569522938
+        - rid: 5584504487569522939
+        - rid: 5584504487569522940
+        - rid: 5584504487569522941
+        - rid: 5584504487569522942
+        - rid: 5584504487569522943
+        history:
+        - rid: 5584504487569522937
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522938
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522939
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Vertical wooden planks for the bottom half of a wall. photorealistic,
+            sharp, smooth edges
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522940
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522941
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522942
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522943
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522944
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: bbf066f7-3f64-44f9-add7-a207d571fa22
+        Seed: 2633433546
+        m_Operators:
+        - rid: 5584504487569522945
+        - rid: 5584504487569522946
+        - rid: 5584504487569522947
+        - rid: 5584504487569522948
+        - rid: 5584504487569522949
+        - rid: 5584504487569522950
+        history:
+        - rid: 5584504487569522944
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522945
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522946
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Vertical wooden planks for the bottom half of a wall. photorealistic,
+            sharp, smooth edges
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522947
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522948
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522949
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522950
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522951
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: e5c45c39-3028-4505-bf4e-685bab30d0a8
+        Seed: 4133913885
+        m_Operators:
+        - rid: 5584504487569522952
+        - rid: 5584504487569522953
+        - rid: 5584504487569522954
+        - rid: 5584504487569522955
+        - rid: 5584504487569522956
+        - rid: 5584504487569522957
+        history:
+        - rid: 5584504487569522951
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522952
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522953
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Vertical wooden planks for the bottom half of a wall. painted white,
+            photorealistic, sharp, smooth edges
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522954
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522955
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522956
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522957
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522958
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 024fba81-aff0-4c6a-9a65-f2b0eac2fbb9
+        Seed: 953617692
+        m_Operators:
+        - rid: 5584504487569522959
+        - rid: 5584504487569522960
+        - rid: 5584504487569522961
+        - rid: 5584504487569522962
+        - rid: 5584504487569522963
+        - rid: 5584504487569522964
+        history:
+        - rid: 5584504487569522958
+        MaterialMetaData:
+          tiling: {x: 2, y: 1}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 1
+          height: 4
+          metallic: 1
+          roughness: 1
+          m_Initialized: 1
+    - rid: 5584504487569522959
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522960
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Vertical wooden planks for the bottom half of a wall. painted white,
+            photorealistic, sharp, smooth edges
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522961
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522962
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522963
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522964
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522965
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 5bbf35c4-1ca6-4278-bfa1-2eee0f08a1bb
+        Seed: 3086011691
+        m_Operators:
+        - rid: 5584504487569522966
+        - rid: 5584504487569522967
+        - rid: 5584504487569522968
+        - rid: 5584504487569522969
+        - rid: 5584504487569522970
+        - rid: 5584504487569522971
+        history:
+        - rid: 5584504487569522965
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522966
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522967
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Vertical wooden planks for the bottom half of a wall. painted white,
+            photorealistic, sharp, smooth edges
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522968
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522969
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522970
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522971
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522972
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 663e00f5-c244-4da4-9985-246619a6f246
+        Seed: 2279989227
+        m_Operators:
+        - rid: 5584504487569522973
+        - rid: 5584504487569522974
+        - rid: 5584504487569522975
+        - rid: 5584504487569522976
+        - rid: 5584504487569522977
+        - rid: 5584504487569522978
+        history:
+        - rid: 5584504487569522972
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522973
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522974
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Vertical wooden planks for the bottom half of a wall. painted white,
+            photorealistic, sharp, smooth edges
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522975
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522976
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522977
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522978
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522979
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 819e743d-5acc-4129-a6ce-17147aa75268
+        Seed: 0
+        m_Operators:
+        - rid: 5584504487569522980
+        - rid: 5584504487569522981
+        history:
+        - rid: 5584504487569522979
+        MaterialMetaData:
+          tiling: {x: 2, y: 1}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 1
+          height: 4
+          metallic: 1
+          roughness: 1
+          m_Initialized: 1
+    - rid: 5584504487569522980
+      type: {class: UpscaleOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: UpscaleOperator
+          version: 0.0.1
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522981
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - Vertical wooden planks for the bottom half of a wall. painted white,
+            photorealistic, sharp, smooth edges
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522982
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 
+        Seed: 0
+        m_Operators:
+        - rid: 5584504487569522983
+        - rid: 5584504487569522984
+        - rid: 5584504487569522985
+        - rid: 5584504487569522986
+        - rid: 5584504487569522987
+        - rid: 5584504487569522988
+        history:
+        - rid: 5584504487569522982
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522983
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522984
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - horizontal wooden planks for the bottom half of a wall. painted white,
+            photorealistic, sharp, smooth edges
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522985
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522986
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522987
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522988
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522989
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 42bba7fc-a00c-479b-bfe2-8c32f36cbd0a
+        Seed: 539216619
+        m_Operators:
+        - rid: 5584504487569522990
+        - rid: 5584504487569522991
+        - rid: 5584504487569522992
+        - rid: 5584504487569522993
+        - rid: 5584504487569522994
+        - rid: 5584504487569522995
+        history:
+        - rid: 5584504487569522989
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522990
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522991
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - horizontal wooden planks for the bottom half of a wall. painted white,
+            photorealistic, sharp, smooth edges
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522992
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522993
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522994
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522995
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569522996
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 8d7a7a4e-0571-4d24-9052-cc222639c9e1
+        Seed: 2989629907
+        m_Operators:
+        - rid: 5584504487569522997
+        - rid: 5584504487569522998
+        - rid: 5584504487569522999
+        - rid: 5584504487569523000
+        - rid: 5584504487569523001
+        - rid: 5584504487569523002
+        history:
+        - rid: 5584504487569522996
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569522997
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522998
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - horizontal wooden planks for the bottom half of a wall. painted white,
+            photorealistic, sharp, smooth edges
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569522999
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523000
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523001
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523002
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523003
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: fd599462-89b1-46b8-87e0-9e2043909ed0
+        Seed: 200327879
+        m_Operators:
+        - rid: 5584504487569523004
+        - rid: 5584504487569523005
+        - rid: 5584504487569523006
+        - rid: 5584504487569523007
+        - rid: 5584504487569523008
+        - rid: 5584504487569523009
+        history:
+        - rid: 5584504487569523003
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569523004
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523005
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - horizontal wooden planks for the bottom half of a wall. painted white,
+            photorealistic, sharp, smooth edges
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523006
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523007
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523008
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523009
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523010
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 58130d63-40bb-443e-8468-f16c9d908f92
+        Seed: 381845142
+        m_Operators:
+        - rid: 5584504487569523011
+        - rid: 5584504487569523012
+        - rid: 5584504487569523013
+        - rid: 5584504487569523014
+        - rid: 5584504487569523015
+        - rid: 5584504487569523016
+        history:
+        - rid: 5584504487569523010
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569523011
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523012
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - horizontal wooden planks. painted white, photorealistic, sharp, smooth
+            edges
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523013
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523014
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523015
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523016
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523017
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: cb45ff68-70a1-4a6e-b18c-238c548e530d
+        Seed: 3046321904
+        m_Operators:
+        - rid: 5584504487569523018
+        - rid: 5584504487569523019
+        - rid: 5584504487569523020
+        - rid: 5584504487569523021
+        - rid: 5584504487569523022
+        - rid: 5584504487569523023
+        history:
+        - rid: 5584504487569523017
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569523018
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523019
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - horizontal wooden planks. painted white, photorealistic, sharp, smooth
+            edges
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523020
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523021
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523022
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523023
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523024
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 3c181d2f-597e-4344-849a-5850d2293a17
+        Seed: 71477174
+        m_Operators:
+        - rid: 5584504487569523025
+        - rid: 5584504487569523026
+        - rid: 5584504487569523027
+        - rid: 5584504487569523028
+        - rid: 5584504487569523029
+        - rid: 5584504487569523030
+        history:
+        - rid: 5584504487569523024
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569523025
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523026
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - horizontal wooden planks. painted white, photorealistic, sharp, smooth
+            edges
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523027
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523028
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523029
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523030
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523031
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: cbcd19da-6168-4133-a6eb-f15db6b28325
+        Seed: 3583112199
+        m_Operators:
+        - rid: 5584504487569523032
+        - rid: 5584504487569523033
+        - rid: 5584504487569523034
+        - rid: 5584504487569523035
+        - rid: 5584504487569523036
+        - rid: 5584504487569523037
+        history:
+        - rid: 5584504487569523031
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569523032
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523033
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - horizontal wooden planks. painted white, photorealistic, sharp, smooth
+            edges
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523034
+      type: {class: NegativePromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: NegativePromptOperator
+          version: 1.0
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523035
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523036
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0
+          - 50
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523037
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          enabled: 0
+          assembly: 
+    - rid: 5584504487569523038
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 
+        Seed: 0
+        m_Operators:
+        - rid: 5584504487569523039
+        - rid: 5584504487569523040
+        history:
+        - rid: 5584504487569523038
+        MaterialMetaData:
+          tiling: {x: 0, y: 0}
+          offset: {x: 0, y: 0}
+          rotation: 0
+          flipVertical: 0
+          flipHorizontal: 0
+          useDisplacement: 0
+          height: 0
+          metallic: 0
+          roughness: 0
+          m_Initialized: 0
+    - rid: 5584504487569523039
+      type: {class: UpscaleOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: UpscaleOperator
+          version: 0.0.1
+          settings:
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 5584504487569523040
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.1
+          settings:
+          - horizontal wooden planks. painted white, photorealistic, sharp, smooth
+            edges
+          enabled: 0
+          assembly: 

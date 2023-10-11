@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-156139838726963037
+--- !u!114 &-2021133403431441469
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 639247ca83abc874e893eb93af2b5e44, type: 3}
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 0
+  version: 7
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: floor
+  m_Name: trim
   m_Shader: {fileID: -6465566751694194690, guid: 871005594d5834f569740429db10d6b4,
     type: 3}
   m_Parent: {fileID: 0}
@@ -38,27 +38,27 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AmbientOcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 8ada16bf4e983244bbc511dbb095205e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4b4568c3c4b126740ae08fb765de1903, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: d156113a0af45fe46bbdb4ad2e312a50, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2a2880a8c86ae964cb069637d5da483c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMap:
-        m_Texture: {fileID: 2800000, guid: fac6e1c86dd525a489ed0a56999d5602, type: 3}
+        m_Texture: {fileID: 2800000, guid: c914ba1402bcada45b5178c094a4f9ee, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicMap:
-        m_Texture: {fileID: 2800000, guid: 41891a357f6b6434d9a423403eb3c95d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 425061948d9b0ef4bb3bf49a9a1fc78f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: b956e3355dc4b774a9fe1b871d0e5570, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6c9076abeb989dd42bf3cd94ee2b14f1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RoughnessMap:
-        m_Texture: {fileID: 2800000, guid: edcafd3816cb39542a2992ab0a2ed0c5, type: 3}
+        m_Texture: {fileID: 2800000, guid: 16a4b274ef1bb9d42aee5600dfd126da, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -80,18 +80,18 @@ Material:
     - _FlipHorizontal: 0
     - _FlipVertical: 0
     - _HeightIntensity: 0.5
-    - _MetallicIntensity: 0
+    - _MetallicIntensity: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Rotation: 0
-    - _RoughnessIntensity: 2.01
+    - _RoughnessIntensity: 1
     - _TessellationFactor: 32
     - _UseDisplacement: 0
     m_Colors:
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
-    - _Tiling: {r: 2, g: 1, b: 0, a: 0}
+    - _Tiling: {r: 10, g: 5, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &5182215381126283073
+--- !u!114 &1871474278811930061
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Script: {fileID: 11500000, guid: 639247ca83abc874e893eb93af2b5e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 7
+  version: 0
