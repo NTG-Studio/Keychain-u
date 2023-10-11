@@ -391,6 +391,32 @@ public class inventoryUIManager : MonoBehaviour
                     moveLeft();
                 }
             }
+            inventoryAction();
+        }
+    }
+
+    /// <summary>
+    /// do the inventory action as determined by what is being pressed
+    /// </summary>
+    private void inventoryAction()
+    {
+        if (Input.GetKeyUp(KeyCode.E))
+        {
+            switch (currentSelection)
+            {
+                case InventoryUISelection.UseEquip:
+                    break;
+                case InventoryUISelection.Discard:
+                    p_inventory.removeItem(CurrentItem);
+                    RefreshAll();
+                    break;
+                case InventoryUISelection.Combine:
+                    break;
+                case InventoryUISelection.ScrollList:
+                    currentSelection = InventoryUISelection.UseEquip;
+                    updateSelection();
+                    break;
+            }
         }
     }
 }
