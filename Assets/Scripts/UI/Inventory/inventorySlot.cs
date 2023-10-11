@@ -51,7 +51,7 @@ public class inventorySlot : MonoBehaviour
     /// <summary>
     /// the current item held by this slot
     /// </summary>
-    [SerializeField] private item current_item;
+    [Expandable] [SerializeField] private item current_item;
 
     /// <summary>
     /// a link to the image to apply the sprite texture to 
@@ -67,6 +67,13 @@ public class inventorySlot : MonoBehaviour
     /// data for the items description
     /// </summary>
     [SerializeField] private TextBlock itemDescription;
+
+    [BoxGroup("Buttons")] [SerializeField] private UIBlock2D useEquipButton;
+    [BoxGroup("Buttons")] [SerializeField] private TextBlock useEquipText;
+    [BoxGroup("Buttons")] [SerializeField] private UIBlock2D combineButton;
+    [BoxGroup("Buttons")] [SerializeField] private TextBlock combineText;
+    [BoxGroup("Buttons")] [SerializeField] private UIBlock2D discardButton;
+    [BoxGroup("Buttons")] [SerializeField] private TextBlock DiscardText;
     // Start is called before the first frame update
     void Start()
     {
@@ -188,7 +195,17 @@ public class inventorySlot : MonoBehaviour
         }
         else
         {
+            ui_manager.CurrentItem = null;
             updateImage();
+        }
+
+        if (current_item == null)
+        {
+            novaUIImage.Color = new Color(0, 0, 0, 0);
+        }
+        else
+        {
+            novaUIImage.Color = new Color(1, 1, 1, 1);
         }
     }
 
@@ -216,20 +233,112 @@ public class inventorySlot : MonoBehaviour
             }
         }
 
-        if (current_item != null)
-        {
-            if (slotTarget == 3)
-            {
-                itemName.Text = current_item.item_name;
-                itemDescription.Text = current_item.description;
-            }
-        }
+        updateData();
     }
 
+    /// <summary>
+    /// reinitialize the slot
+    /// </summary>
     public void refresh()
     {
         Debug.Log("refresh");
         updateItem();
+    }
+
+    /// <summary>
+    /// update the name,description,and buttons
+    /// </summary>
+    private void updateData()
+    {
+        if (slotTarget == 3)
+        {
+            if(current_item!=null)
+            {
+                //update uiManager
+                ui_manager.CurrentItem = current_item;
+
+                //name and description
+                itemName.Text = current_item.item_name;
+                itemDescription.Text = current_item.description;
+
+                //buttons
+
+                //usable
+                if (current_item.usable)
+                {
+                    useEquipButton.gameObject.SetActive(true);
+                    useEquipText.gameObject.SetActive(true);
+                    useEquipText.Text = "Use";
+                }
+                else
+                {
+                    useEquipButton.gameObject.SetActive(false);
+                    useEquipText.gameObject.SetActive(false);
+                }
+
+                //equippable
+                if (current_item.equippable)
+                {
+                    useEquipButton.gameObject.SetActive(true);
+                    useEquipText.gameObject.SetActive(true);
+                    useEquipText.Text = "Equip";
+                }
+                else
+                {
+                    if (!current_item.usable)
+                    {
+                        useEquipButton.gameObject.SetActive(false);
+                        useEquipText.gameObject.SetActive(false);
+                    }
+                }
+
+                //discardable
+                if (current_item.discardable)
+                {
+                    discardButton.gameObject.SetActive(true);
+                    DiscardText.gameObject.SetActive(true);
+                }
+                else
+                {
+                    discardButton.gameObject.SetActive(false);
+                    DiscardText.gameObject.SetActive(false);
+                }
+
+                //combinable
+                if (current_item.combineable)
+                {
+                    combineButton.gameObject.SetActive(true);
+                    combineText.gameObject.SetActive(true);
+                }
+                else
+                {
+                    combineButton.gameObject.SetActive(false);
+                    combineText.gameObject.SetActive(false);
+                }
+            }
+            else
+            {
+                useEquipButton.gameObject.SetActive(false);
+                useEquipText.gameObject.SetActive(false);
+            
+                discardButton.gameObject.SetActive(false);
+                DiscardText.gameObject.SetActive(false);
+            
+                combineButton.gameObject.SetActive(false);
+                combineText.gameObject.SetActive(false);
+            }
+        }
+        else
+        {
+            useEquipButton.gameObject.SetActive(false);
+            useEquipText.gameObject.SetActive(false);
+            
+            discardButton.gameObject.SetActive(false);
+            DiscardText.gameObject.SetActive(false);
+            
+            combineButton.gameObject.SetActive(false);
+            combineText.gameObject.SetActive(false);
+        }
     }
 }
 

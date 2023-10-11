@@ -19,4 +19,5 @@ MonoBehaviour:
   usable: 0
   stackable: 0
   equippable: 0
-  discardable: 0
+  discardable: 1
+  combineable: 0

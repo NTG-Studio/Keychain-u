@@ -20,3 +20,4 @@ MonoBehaviour:
   stackable: 0
   equippable: 0
   discardable: 0
+  combineable: 1

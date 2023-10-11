@@ -15,4 +15,5 @@ public class item : ScriptableObject
     public bool stackable;
     public bool equippable;
     public bool discardable;
+    public bool combineable;
 }

@@ -224,7 +224,14 @@ public class playerInventory : MonoBehaviour
     /// <returns>the count of items</returns>
     public int getCount()
     {
-        return slots.Count;
+        if (slots != null)
+        {
+            return slots.Count;
+        }
+        else
+        {
+            return 0;
+        }
     }
 
     [Button]
