@@ -1,19 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-[CreateAssetMenu (fileName = "item", menuName = "data/items/item", order = 0)]
-public class item : ScriptableObject
+namespace Items
 {
-    public string item_name;
-    public int id;
-    public string description;
-    public Sprite image;
+    [CreateAssetMenu (fileName = "item", menuName = "data/items/item", order = 0)]
+    public class Item : ScriptableObject
+    {
+        [FormerlySerializedAs("item_name")] public string itemName;
+        public int id;
+        public string description;
+        public Sprite image;
 
-    [Header("flags")] 
-    public bool usable;
-    public bool stackable;
-    public bool equippable;
-    public bool discardable;
-    public bool combineable;
+        [Header("flags")] 
+        public bool usable;
+        public bool stackable;
+        public bool equippable;
+        public bool discardable;
+        public bool combineable;
+    }
 }

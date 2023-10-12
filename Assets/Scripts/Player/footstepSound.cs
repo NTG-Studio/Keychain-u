@@ -1,21 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class footstepSound : MonoBehaviour
+namespace Player
 {
-    [SerializeField] private AudioSource left_Foot;
+    public class FootstepSound : MonoBehaviour
+    {
+        [FormerlySerializedAs("left_Foot")] [SerializeField] private AudioSource leftFoot;
 
-    [SerializeField] private AudioSource right_foot;
+        [FormerlySerializedAs("right_foot")] [SerializeField] private AudioSource rightFoot;
     
     
-    public void leftFoot()
-    {
-        left_Foot.Play();
-    }
+        public void LeftFoot()
+        {
+            leftFoot.Play();
+        }
 
-    public void rightFoot()
-    {
-        right_foot.Play();
+        public void RightFoot()
+        {
+            rightFoot.Play();
+        }
     }
 }

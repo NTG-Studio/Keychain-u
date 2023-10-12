@@ -1,9 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class itemSlot
+namespace Items
 {
-    public  item itm;
-    public int stack;
+    [System.Serializable]
+    public class ItemSlot
+    {
+        public  Item Itm;
+        public int Stack;
+    }
 }

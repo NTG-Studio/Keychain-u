@@ -1,81 +1,93 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-public class sys_input : MonoBehaviour
+namespace Game
 {
-    [SerializeField] public Vector2 input=Vector2.zero;
-    [SerializeField] public InputActionAsset moveAction;
-    public static sys_input instance;
-
-    public UnityEvent inventoryButton;
-    public UnityEvent useButton;
-
-    public UnityEvent up;
-    public UnityEvent right;
-    public UnityEvent left;
-    public UnityEvent down;
-
-    private void Start()
+    public class SysInput : MonoBehaviour
     {
-        if (instance == null)
+        [SerializeField] public Vector2 input=Vector2.zero;
+        [SerializeField] public InputActionAsset moveAction;
+        public static SysInput Instance;
+
+        public UnityEvent inventoryButton;
+        public UnityEvent useButton;
+
+        public UnityEvent up;
+        public UnityEvent right;
+        public UnityEvent left;
+        public UnityEvent down;
+
+        private void Start()
         {
-            instance = this;
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+            else
+            {
+                Destroy(this);
+            }
         }
-        else
+
+        private void Update()
         {
-            Destroy(this);
+            UpdateInput();   
         }
-    }
 
-    private void Update()
-    {
-        updateInput();   
-    }
-
-    void updateInput()
-    {
-        InputAction move = moveAction.FindAction("Move");
-        input = move.ReadValue<Vector2>();
-    }
-
-
-    public void onUse(InputAction.CallbackContext context)
-    {
-        if (useButton != null)
+        void UpdateInput()
         {
-            useButton.Invoke();
+            InputAction move = moveAction.FindAction("Move");
+            input = move.ReadValue<Vector2>();
         }
-    }
-    
-    public void onInventory(InputAction.CallbackContext context)
-    {
-        if (inventoryButton != null)
-        {
-            inventoryButton.Invoke();
-        }
-    }
 
-    public void OnUp(InputAction.CallbackContext context)
-    {
-        up.Invoke();
-    }
+
+        public void OnUse(InputAction.CallbackContext context)
+        {
+            if (useButton != null&& context.phase == InputActionPhase.Performed)
+            {
+                useButton.Invoke();
+            }
+        }
     
-    public void OnRight(InputAction.CallbackContext context)
-    {
-        right.Invoke();
-    }
+        public void OnInventory(InputAction.CallbackContext context)
+        {
+            if (inventoryButton != null && context.phase == InputActionPhase.Performed)
+            {
+                inventoryButton.Invoke();
+            }
+        }
+
+        public void OnUp(InputAction.CallbackContext context)
+        {
+            if (up!=null &&context.phase == InputActionPhase.Performed)
+            {
+                up.Invoke();
+            }
+        }
     
-    public void OnLeft(InputAction.CallbackContext context)
-    {
-        left.Invoke();
-    }
+        public void OnRight(InputAction.CallbackContext context)
+        {
+            if (right !=null &&context.phase == InputActionPhase.Performed)
+            {
+                right.Invoke();
+            }
+        }
     
-    public void OnDown(InputAction.CallbackContext context)
-    {
-        down.Invoke();
+        public void OnLeft(InputAction.CallbackContext context)
+        {
+            if (left !=null && context.phase == InputActionPhase.Performed)
+            {
+                left.Invoke();
+            }
+        }
+    
+        public void OnDown(InputAction.CallbackContext context)
+        {
+            if (down !=null && context.phase == InputActionPhase.Performed)
+            {
+                down.Invoke();
+            }
+        }
     }
 }

@@ -733,18 +733,22 @@ MonoBehaviour:
   numberOfSlots: 6
   targetPosition: {x: 0, y: 0, z: 0}
   targetScale: {x: 0, y: 0, z: 0}
-  p_inventory: {fileID: 0}
-  ui_manager: {fileID: 0}
-  current_item: {fileID: 0}
+  pInventory: {fileID: 0}
+  uiManager: {fileID: 0}
+  currentItem: {fileID: 0}
   novaUIImage: {fileID: 0}
   itemName: {fileID: 669738732}
   itemDescription: {fileID: 993985746}
-  useEquipButton: {fileID: 779979165}
-  useEquipText: {fileID: 890165538}
-  combineButton: {fileID: 1479900587}
-  combineText: {fileID: 286162947}
-  discardButton: {fileID: 1061490239}
-  DiscardText: {fileID: 2090659465}
+  useEquip:
+    button: {fileID: 779979165}
+    text: {fileID: 890165538}
+  combine:
+    button: {fileID: 1479900587}
+    text: {fileID: 286162947}
+  discard:
+    button: {fileID: 1061490239}
+    text: {fileID: 2090659465}
+  discardText: {fileID: 2090659465}
 --- !u!114 &259368336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1818,8 +1822,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1075105949}
-        m_TargetAssemblyTypeName: inventoryUIManager, Assembly-CSharp
-        m_MethodName: openCloseInventory
+        m_TargetAssemblyTypeName: UI.Inventory.InventoryUIManager, Assembly-CSharp
+        m_MethodName: OpenCloseInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1833,8 +1837,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1075105949}
-        m_TargetAssemblyTypeName: inventoryUIManager, Assembly-CSharp
-        m_MethodName: inventoryAction
+        m_TargetAssemblyTypeName: UI.Inventory.InventoryUIManager, Assembly-CSharp
+        m_MethodName: InventoryAction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1848,8 +1852,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1075105949}
-        m_TargetAssemblyTypeName: inventoryUIManager, Assembly-CSharp
-        m_MethodName: scrollUp
+        m_TargetAssemblyTypeName: UI.Inventory.InventoryUIManager, Assembly-CSharp
+        m_MethodName: ScrollUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1863,8 +1867,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1075105949}
-        m_TargetAssemblyTypeName: inventoryUIManager, Assembly-CSharp
-        m_MethodName: scrollInventoryRight
+        m_TargetAssemblyTypeName: UI.Inventory.InventoryUIManager, Assembly-CSharp
+        m_MethodName: ScrollInventoryRight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1878,8 +1882,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1075105949}
-        m_TargetAssemblyTypeName: inventoryUIManager, Assembly-CSharp
-        m_MethodName: scrollInventoryLeft
+        m_TargetAssemblyTypeName: UI.Inventory.InventoryUIManager, Assembly-CSharp
+        m_MethodName: ScrollInventoryLeft
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1893,8 +1897,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1075105949}
-        m_TargetAssemblyTypeName: inventoryUIManager, Assembly-CSharp
-        m_MethodName: scrollDown
+        m_TargetAssemblyTypeName: UI.Inventory.InventoryUIManager, Assembly-CSharp
+        m_MethodName: ScrollDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1937,8 +1941,8 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 295222456}
-        m_TargetAssemblyTypeName: sys_input, Assembly-CSharp
-        m_MethodName: onUse
+        m_TargetAssemblyTypeName: Game.SysInput, Assembly-CSharp
+        m_MethodName: OnUse
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1953,8 +1957,8 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 295222456}
-        m_TargetAssemblyTypeName: sys_input, Assembly-CSharp
-        m_MethodName: onInventory
+        m_TargetAssemblyTypeName: Game.SysInput, Assembly-CSharp
+        m_MethodName: OnInventory
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1975,19 +1979,67 @@ MonoBehaviour:
     m_ActionId: 36f051e6-9c19-4b82-a0a6-259c30ff77dc
     m_ActionName: player/back[/Keyboard/q]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 295222456}
+        m_TargetAssemblyTypeName: sys_input, Assembly-CSharp
+        m_MethodName: OnLeft
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 48e30adf-aff0-4e4e-bf28-2a8ce4527b60
     m_ActionName: player/left[/Keyboard/a]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 295222456}
+        m_TargetAssemblyTypeName: sys_input, Assembly-CSharp
+        m_MethodName: OnRight
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: fa21394a-9883-499b-be7e-7f473c7d6f11
     m_ActionName: player/right[/Keyboard/d]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 295222456}
+        m_TargetAssemblyTypeName: sys_input, Assembly-CSharp
+        m_MethodName: OnUp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 6576de53-5061-47af-bd88-96789ba2cb55
     m_ActionName: player/up[/Keyboard/w]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 295222456}
+        m_TargetAssemblyTypeName: sys_input, Assembly-CSharp
+        m_MethodName: OnDown
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: a34ad8e3-710e-49e1-9d99-c521151da613
     m_ActionName: player/down[/Keyboard/s]
   m_NeverAutoSwitchControlSchemes: 0
@@ -3638,18 +3690,22 @@ MonoBehaviour:
   numberOfSlots: 6
   targetPosition: {x: 0, y: 0, z: 0}
   targetScale: {x: 0, y: 0, z: 0}
-  p_inventory: {fileID: 0}
-  ui_manager: {fileID: 0}
-  current_item: {fileID: 0}
+  pInventory: {fileID: 0}
+  uiManager: {fileID: 0}
+  currentItem: {fileID: 0}
   novaUIImage: {fileID: 0}
   itemName: {fileID: 669738732}
   itemDescription: {fileID: 993985746}
-  useEquipButton: {fileID: 779979165}
-  useEquipText: {fileID: 890165538}
-  combineButton: {fileID: 1479900587}
-  combineText: {fileID: 286162947}
-  discardButton: {fileID: 1061490239}
-  DiscardText: {fileID: 2090659465}
+  useEquip:
+    button: {fileID: 779979165}
+    text: {fileID: 890165538}
+  combine:
+    button: {fileID: 1479900587}
+    text: {fileID: 286162947}
+  discard:
+    button: {fileID: 1061490239}
+    text: {fileID: 2090659465}
+  discardText: {fileID: 2090659465}
 --- !u!114 &539595682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4441,18 +4497,22 @@ MonoBehaviour:
   numberOfSlots: 6
   targetPosition: {x: 0, y: 0, z: 0}
   targetScale: {x: 0, y: 0, z: 0}
-  p_inventory: {fileID: 0}
-  ui_manager: {fileID: 0}
-  current_item: {fileID: 0}
+  pInventory: {fileID: 0}
+  uiManager: {fileID: 0}
+  currentItem: {fileID: 0}
   novaUIImage: {fileID: 0}
   itemName: {fileID: 669738732}
   itemDescription: {fileID: 993985746}
-  useEquipButton: {fileID: 779979165}
-  useEquipText: {fileID: 890165538}
-  combineButton: {fileID: 1479900587}
-  combineText: {fileID: 286162947}
-  discardButton: {fileID: 1061490239}
-  DiscardText: {fileID: 2090659465}
+  useEquip:
+    button: {fileID: 779979165}
+    text: {fileID: 890165538}
+  combine:
+    button: {fileID: 1479900587}
+    text: {fileID: 286162947}
+  discard:
+    button: {fileID: 1061490239}
+    text: {fileID: 2090659465}
+  discardText: {fileID: 2090659465}
 --- !u!114 &658402594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7040,18 +7100,22 @@ MonoBehaviour:
   numberOfSlots: 6
   targetPosition: {x: 0, y: 0, z: 0}
   targetScale: {x: 0, y: 0, z: 0}
-  p_inventory: {fileID: 0}
-  ui_manager: {fileID: 0}
-  current_item: {fileID: 0}
+  pInventory: {fileID: 0}
+  uiManager: {fileID: 0}
+  currentItem: {fileID: 0}
   novaUIImage: {fileID: 0}
   itemName: {fileID: 669738732}
   itemDescription: {fileID: 993985746}
-  useEquipButton: {fileID: 779979165}
-  useEquipText: {fileID: 890165538}
-  combineButton: {fileID: 1479900587}
-  combineText: {fileID: 286162947}
-  discardButton: {fileID: 1061490239}
-  DiscardText: {fileID: 2090659465}
+  useEquip:
+    button: {fileID: 779979165}
+    text: {fileID: 890165538}
+  combine:
+    button: {fileID: 1479900587}
+    text: {fileID: 286162947}
+  discard:
+    button: {fileID: 1061490239}
+    text: {fileID: 2090659465}
+  discardText: {fileID: 2090659465}
 --- !u!1 &977991673
 GameObject:
   m_ObjectHideFlags: 0
@@ -9188,6 +9252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f3ff9817064c4649bde5b1b32add07b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _slots: []
   count: 0
   testItem:
   - {fileID: 11400000, guid: 9a21cf6bfa5202b43a57ee277f618465, type: 2}
@@ -9197,7 +9262,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7b3ec85119e9a8444af31d7bf7d3c8cd, type: 2}
   - {fileID: 11400000, guid: 5a09466df603be9439ff3eaaae244ccd, type: 2}
   - {fileID: 11400000, guid: 917e2466312e01c4eabb5f776c45b947, type: 2}
-  equipped_index: -1
+  equippedIndex: -1
   manager: {fileID: 0}
 --- !u!114 &1075105949
 MonoBehaviour:
@@ -9212,279 +9277,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayItems: 
-  p_inventory: {fileID: 0}
   playerInventoryEmpty: 0
   inventoryVisible: 0
-  InventoryAnim: {fileID: 1506254180}
-  scrollLeft:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 949613878}
-        m_TargetAssemblyTypeName: inventorySlot, Assembly-CSharp
-        m_MethodName: moveLeft
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 539595681}
-        m_TargetAssemblyTypeName: inventorySlot, Assembly-CSharp
-        m_MethodName: moveLeft
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1534552043}
-        m_TargetAssemblyTypeName: inventorySlot, Assembly-CSharp
-        m_MethodName: moveLeft
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 259368335}
-        m_TargetAssemblyTypeName: inventorySlot, Assembly-CSharp
-        m_MethodName: moveLeft
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1787196015}
-        m_TargetAssemblyTypeName: inventorySlot, Assembly-CSharp
-        m_MethodName: moveLeft
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1702087364}
-        m_TargetAssemblyTypeName: inventorySlot, Assembly-CSharp
-        m_MethodName: moveLeft
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 658402593}
-        m_TargetAssemblyTypeName: inventorySlot, Assembly-CSharp
-        m_MethodName: moveLeft
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  scrollRight:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 949613878}
-        m_TargetAssemblyTypeName: inventorySlot, Assembly-CSharp
-        m_MethodName: moveRight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 539595681}
-        m_TargetAssemblyTypeName: inventorySlot, Assembly-CSharp
-        m_MethodName: moveRight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1534552043}
-        m_TargetAssemblyTypeName: inventorySlot, Assembly-CSharp
-        m_MethodName: moveRight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 259368335}
-        m_TargetAssemblyTypeName: inventorySlot, Assembly-CSharp
-        m_MethodName: moveRight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1787196015}
-        m_TargetAssemblyTypeName: inventorySlot, Assembly-CSharp
-        m_MethodName: moveRight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1702087364}
-        m_TargetAssemblyTypeName: inventorySlot, Assembly-CSharp
-        m_MethodName: moveRight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 658402593}
-        m_TargetAssemblyTypeName: inventorySlot, Assembly-CSharp
-        m_MethodName: moveRight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  refresh:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 949613878}
-        m_TargetAssemblyTypeName: inventorySlot, Assembly-CSharp
-        m_MethodName: refresh
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 539595681}
-        m_TargetAssemblyTypeName: inventorySlot, Assembly-CSharp
-        m_MethodName: refresh
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1534552043}
-        m_TargetAssemblyTypeName: inventorySlot, Assembly-CSharp
-        m_MethodName: refresh
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 259368335}
-        m_TargetAssemblyTypeName: inventorySlot, Assembly-CSharp
-        m_MethodName: refresh
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1787196015}
-        m_TargetAssemblyTypeName: inventorySlot, Assembly-CSharp
-        m_MethodName: refresh
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1702087364}
-        m_TargetAssemblyTypeName: inventorySlot, Assembly-CSharp
-        m_MethodName: refresh
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 658402593}
-        m_TargetAssemblyTypeName: inventorySlot, Assembly-CSharp
-        m_MethodName: refresh
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  slots: []
   currentSelection: 0
-  CurrentItem: {fileID: 0}
-  useEquipButton: {fileID: 779979165}
-  useEquipText: {fileID: 890165538}
-  combineButton: {fileID: 1479900587}
-  combineText: {fileID: 286162947}
-  discardButton: {fileID: 1061490239}
-  DiscardText: {fileID: 2090659465}
+  currentItem: {fileID: 0}
+  useEquip:
+    button: {fileID: 779979165}
+    text: {fileID: 890165538}
+  combine:
+    button: {fileID: 1479900587}
+    text: {fileID: 286162947}
+  discard:
+    button: {fileID: 1061490239}
+    text: {fileID: 2090659465}
+  pInventory: {fileID: 0}
+  inventoryAnim: {fileID: 1506254180}
 --- !u!4 &1075105950
 Transform:
   m_ObjectHideFlags: 0
@@ -11706,18 +11514,22 @@ MonoBehaviour:
   numberOfSlots: 6
   targetPosition: {x: 0, y: 0, z: 0}
   targetScale: {x: 0, y: 0, z: 0}
-  p_inventory: {fileID: 0}
-  ui_manager: {fileID: 0}
-  current_item: {fileID: 0}
+  pInventory: {fileID: 0}
+  uiManager: {fileID: 0}
+  currentItem: {fileID: 0}
   novaUIImage: {fileID: 0}
   itemName: {fileID: 669738732}
   itemDescription: {fileID: 993985746}
-  useEquipButton: {fileID: 779979165}
-  useEquipText: {fileID: 890165538}
-  combineButton: {fileID: 1479900587}
-  combineText: {fileID: 286162947}
-  discardButton: {fileID: 1061490239}
-  DiscardText: {fileID: 2090659465}
+  useEquip:
+    button: {fileID: 779979165}
+    text: {fileID: 890165538}
+  combine:
+    button: {fileID: 1479900587}
+    text: {fileID: 286162947}
+  discard:
+    button: {fileID: 1061490239}
+    text: {fileID: 2090659465}
+  discardText: {fileID: 2090659465}
 --- !u!114 &1534552044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13922,18 +13734,22 @@ MonoBehaviour:
   numberOfSlots: 6
   targetPosition: {x: 0, y: 0, z: 0}
   targetScale: {x: 0, y: 0, z: 0}
-  p_inventory: {fileID: 0}
-  ui_manager: {fileID: 0}
-  current_item: {fileID: 0}
+  pInventory: {fileID: 0}
+  uiManager: {fileID: 0}
+  currentItem: {fileID: 0}
   novaUIImage: {fileID: 0}
   itemName: {fileID: 669738732}
   itemDescription: {fileID: 993985746}
-  useEquipButton: {fileID: 779979165}
-  useEquipText: {fileID: 890165538}
-  combineButton: {fileID: 1479900587}
-  combineText: {fileID: 286162947}
-  discardButton: {fileID: 1061490239}
-  DiscardText: {fileID: 2090659465}
+  useEquip:
+    button: {fileID: 779979165}
+    text: {fileID: 890165538}
+  combine:
+    button: {fileID: 1479900587}
+    text: {fileID: 286162947}
+  discard:
+    button: {fileID: 1061490239}
+    text: {fileID: 2090659465}
+  discardText: {fileID: 2090659465}
 --- !u!114 &1702087365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17381,18 +17197,22 @@ MonoBehaviour:
   numberOfSlots: 6
   targetPosition: {x: 0, y: 0, z: 0}
   targetScale: {x: 0, y: 0, z: 0}
-  p_inventory: {fileID: 0}
-  ui_manager: {fileID: 0}
-  current_item: {fileID: 0}
+  pInventory: {fileID: 0}
+  uiManager: {fileID: 0}
+  currentItem: {fileID: 0}
   novaUIImage: {fileID: 0}
   itemName: {fileID: 669738732}
   itemDescription: {fileID: 993985746}
-  useEquipButton: {fileID: 779979165}
-  useEquipText: {fileID: 890165538}
-  combineButton: {fileID: 1479900587}
-  combineText: {fileID: 286162947}
-  discardButton: {fileID: 1061490239}
-  DiscardText: {fileID: 2090659465}
+  useEquip:
+    button: {fileID: 779979165}
+    text: {fileID: 890165538}
+  combine:
+    button: {fileID: 1479900587}
+    text: {fileID: 286162947}
+  discard:
+    button: {fileID: 1061490239}
+    text: {fileID: 2090659465}
+  discardText: {fileID: 2090659465}
 --- !u!114 &1787196016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18343,8 +18163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1663ac5a5d17cb64a85114ce5589b11f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  left_Foot: {fileID: 2218424173506434680}
-  right_foot: {fileID: 214251123}
+  leftFoot: {fileID: 2218424173506434680}
+  rightFoot: {fileID: 214251123}
 --- !u!1001 &2066445699
 PrefabInstance:
   m_ObjectHideFlags: 0

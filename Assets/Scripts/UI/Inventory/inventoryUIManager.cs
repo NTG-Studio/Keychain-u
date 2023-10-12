@@ -1,449 +1,421 @@
-using System.Collections;
 using System.Collections.Generic;
 using NaughtyAttributes;
-using Nova;
 using UnityEngine;
-using UnityEngine.Events;
+using Items;
 
-public class inventoryUIManager : MonoBehaviour
+namespace UI.Inventory
 {
-    
-    [BoxGroup("References")] [SerializeField] private List<int> displayItems;
-    [BoxGroup("References")] [SerializeField] private playerInventory p_inventory;
-    [SerializeField] private bool playerInventoryEmpty = false;
-    [SerializeField] private bool inventoryVisible = false;
-    [BoxGroup("References")] [SerializeField] private Animator InventoryAnim ;
-
-    [HorizontalLine] private int spacer = 0;
-    [BoxGroup("Events")][SerializeField] public UnityEvent scrollLeft;
-    [BoxGroup("Events")][SerializeField] public UnityEvent scrollRight;
-    [BoxGroup("Events")][SerializeField] public UnityEvent refresh;
-
-    public InventoryUISelection currentSelection = 0;
-
-    public item CurrentItem;
-    
-    [BoxGroup("Buttons")] [SerializeField] private UIBlock2D useEquipButton;
-    [BoxGroup("Buttons")] [SerializeField] private TextBlock useEquipText;
-    [BoxGroup("Buttons")] [SerializeField] private UIBlock2D combineButton;
-    [BoxGroup("Buttons")] [SerializeField] private TextBlock combineText;
-    [BoxGroup("Buttons")] [SerializeField] private UIBlock2D discardButton;
-    [BoxGroup("Buttons")] [SerializeField] private TextBlock DiscardText;
-
-    private bool lastOperationisDown = true;
-    // Start is called before the first frame update
-    void Start()
+    public class InventoryUIManager : MonoBehaviour
     {
-       RefreshAll();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //set the inventory empty tag
-        if (p_inventory.getCount() == 0)
-        {
-            playerInventoryEmpty = true;
-        }
-        else
-        {
-            playerInventoryEmpty = false;
-        }
+        [SerializeField] private List<int> displayItems;
+        [SerializeField] private bool playerInventoryEmpty;
+        [SerializeField] private bool inventoryVisible;
         
-        InventoryAnim.SetBool("inventoryVisible",inventoryVisible);
+        public List<InventorySlot> slots;
 
-        //adjust the current selection
-        if (lastOperationisDown)
-        {
-            updateSelection();
-        }
-        else
-        {
-            updateSelectionUpward();
-        }
+        public InventoryUISelection currentSelection = InventoryUISelection.ScrollList;
+
+        [Expandable] public Item currentItem;
         
-        //allows moving through the inventory
-        processInput();
-    }
+        [Header("References")]
+     
+        public UINode useEquip;
+        public UINode combine;
+        public UINode discard;
+        
+        [BoxGroup("Inventory Management")] [SerializeField] private PlayerInventory pInventory;
+        [BoxGroup("Inventory Management")] [SerializeField] private Animator inventoryAnim;
 
-    /// <summary>
-    /// makes sure all slots stay in the range they should be which should be between 0 and the player inventory count
-    /// </summary>
-    private void processSlots()
-    {
-        if (!playerInventoryEmpty)
+
+        //private helper parameters
+        private bool _lastOperationIsDown = true;
+        private static readonly Color DarkColor = new Color(0.2f, 0.2f, 0.2f, 1);
+        private static readonly Color LightColor = new Color(0.8f, 0.8f, 0.8f, 1);
+
+        // Start is called before the first frame update
+        void Start()
         {
-            for (int i = 0; i < displayItems.Count; i++)
+            RefreshAll();
+        }
+
+        // Update is called once per frame
+        private void Update()
+        {
+            //set the inventory empty tag
+            playerInventoryEmpty = (pInventory.GetCount() == 0);
+            inventoryAnim.SetBool("inventoryVisible", inventoryVisible);
+
+            //adjust the current selection
+            if (_lastOperationIsDown)
             {
-                while (!slotInRange(i))
+                UpdateSelection();
+            }
+            else
+            {
+                UpdateSelectionUpward();
+            }
+        }
+
+        /// <summary>
+        /// makes sure all slots stay in the range they should be which should be between 0 and the player inventory count
+        /// </summary>
+        private void ProcessSlots()
+        {
+            if (!playerInventoryEmpty)
+            {
+                for (int i = 0; i < displayItems.Count; i++)
                 {
-                    processSlot(i);
+                    while (!SlotInRange(i))
+                    {
+                        ProcessSlot(i);
+                    }
                 }
             }
         }
-    }
 
-    /// <summary>
-    /// makes sure a single slot stays in the range it should be
-    /// </summary>
-    private void processSlot(int index)
-    {
-        if(p_inventory.getCount()==1)
+        /// <summary>
+        /// makes sure a single slot stays in the range it should be
+        /// </summary>
+        private void ProcessSlot(int index)
         {
-            displayItems[index] = 0;
-        }
-        else
-        {
-            if (displayItems[index] < 0)
-            {
-                displayItems[index] = p_inventory.getCount() - 1;
-            }
-
-            if (displayItems[index] >= p_inventory.getCount())
+            if (pInventory.GetCount() == 1)
             {
                 displayItems[index] = 0;
             }
-        }
-    }
-
-    /// <summary>
-    /// returns true if the slot index is in range, false if now
-    /// </summary>
-    /// <param name="index">the slot to check</param>
-    /// <returns>is the slot in range or nah?</returns>
-    private bool slotInRange(int index)
-    {
-        if (displayItems[index] >= 0 && displayItems[index] < p_inventory.getCount())
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-
-    /// <summary>
-    /// moves all slots one to the left
-    /// </summary>
-    [Button]
-    public void moveRight()
-    {
-        if (!playerInventoryEmpty)
-        {
-            for (int i = 0; i < displayItems.Count; i++)
+            else
             {
-                displayItems[i]--;
-            }
-            processSlots();
-            if (scrollLeft != null)
-            {
-                scrollLeft.Invoke();
-            }
-        }
-    }
-
-    /// <summary>
-    /// moves all slots one to the right
-    /// </summary>
-    [Button]
-    public void moveLeft()
-    {
-        if (!playerInventoryEmpty)
-        {
-            for (int i = 0; i < displayItems.Count; i++)
-            {
-                displayItems[i]++;
-            }
-            processSlots();
-            if (scrollRight != null)
-            {
-                scrollRight.Invoke();
-            }
-        }
-    }
-
-    /// <summary>
-    /// gets a value out of slots
-    /// </summary>
-    /// <param name="slot">the index to pull from</param>
-    /// <returns>the item index</returns>
-    public int getIndex(int slot)
-    {
-        return displayItems[slot];
-    }
-
-    /// <summary>
-    /// reset the bulk of the data
-    /// </summary>
-    public void RefreshAll()
-    {
-        displayItems = new List<int>();
-        displayItems.Add(0);
-        displayItems.Add(1);
-        displayItems.Add(2);
-        displayItems.Add(3);
-        displayItems.Add(4);
-        displayItems.Add(5);
-        displayItems.Add(7);
-        
-        if (p_inventory == null)
-        {
-            p_inventory = GameObject.FindObjectOfType<playerInventory>();
-        }
-        
-        if (p_inventory.getCount() == 0)
-        {
-            playerInventoryEmpty = true;
-        }
-        else
-        {
-            playerInventoryEmpty = false;
-        }
-        
-        processSlots();
-
-        if (refresh != null)
-        {
-            if (refresh != null)
-            {
-                refresh.Invoke();
-            }
-        }
-    }
-
-    /// <summary>
-    /// update the current selection moving downward
-    /// </summary>
-    private void updateSelection()
-    {
-        //if the item is valid
-        if (CurrentItem != null)
-        {
-            if (currentSelection != 0)
-            {
-                switch (currentSelection)
+                if (displayItems[index] < 0)
                 {
-                    case InventoryUISelection.UseEquip:
-                        UpdateButtons(true,false,false);
-                        if (!CurrentItem.equippable && !CurrentItem.usable)
-                        {
-                            currentSelection++;
-                        }
-                        break;
-                    case InventoryUISelection.Discard:
-                        UpdateButtons(false,false,true);
-                        if (!CurrentItem.discardable)
-                        {
-                            currentSelection++;
-                        }
-                        break;
-                    case InventoryUISelection.Combine:
-                        UpdateButtons(false,true,false);
-                        if (!CurrentItem.combineable)
-                        {
-                            currentSelection++;
-                        }
-                        break;
-                    case InventoryUISelection.Def:
-                        currentSelection = InventoryUISelection.ScrollList;
-                        UpdateButtons(false,false,false);
-                        break;
-                    default:
-                        currentSelection = InventoryUISelection.ScrollList;
-                        UpdateButtons(false,false,false);
-                        break;
+                    displayItems[index] = pInventory.GetCount() - 1;
                 }
-            }
-        }
-    }
-    
-    /// <summary>
-    /// update the current selection, moving upward if the value is invalid
-    /// </summary>
-    private void updateSelectionUpward()
-    {
-        //if the item is valid
-        if (CurrentItem != null)
-        {
-            if (currentSelection != 0)
-            {
-                switch (currentSelection)
+
+                if (displayItems[index] >= pInventory.GetCount())
                 {
-                    case InventoryUISelection.UseEquip:
-                        UpdateButtons(true,false,false);
-                        if (!CurrentItem.equippable && !CurrentItem.usable)
-                        {
-                            currentSelection--;
-                        }
-                        break;
-                    case InventoryUISelection.Discard:
-                        UpdateButtons(false,false,true);
-                        if (!CurrentItem.discardable)
-                        {
-                            currentSelection--;
-                        }
-                        break;
-                    case InventoryUISelection.Combine:
-                        UpdateButtons(false,true,false);
-                        if (!CurrentItem.combineable)
-                        {
-                            currentSelection--;
-                        }
-                        break;
-                    case InventoryUISelection.Def:
-                        currentSelection = InventoryUISelection.ScrollList;
-                        UpdateButtons(false,false,false);
-                        break;
-                    default:
-                        currentSelection = InventoryUISelection.ScrollList;
-                        UpdateButtons(false,false,false);
-                        break;
+                    displayItems[index] = 0;
                 }
             }
         }
 
-        
-    }
-    
-    /// <summary>
-    /// update the buttons visiblilty for current selection
-    /// </summary>
-    /// <param name="equipUse"></param>
-    /// <param name="combine"></param>
-    /// <param name="discard"></param>
-    private void UpdateButtons(bool equipUse, bool combine, bool discard )
-    {
-        Color darkColor = new Color(0.2f, 0.2f, 0.2f, 1);
-        Color lightColor = new Color(0.8f, 0.8f, 0.8f, 1);
-        if (equipUse)
+        /// <summary>
+        /// returns true if the slot index is in range, false if now
+        /// </summary>
+        /// <param name="index">the slot to check</param>
+        /// <returns>is the slot in range or nah?</returns>
+        private bool SlotInRange(int index)
         {
-            useEquipButton.Color = lightColor;
-            useEquipText.Color = darkColor;
+            if (displayItems[index] >= 0 && displayItems[index] < pInventory.GetCount())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
-        else
-        {
-            useEquipButton.Color = darkColor;
-            useEquipText.Color = lightColor;
-        }
-        
-        if (combine)
-        {
-            combineButton.Color = lightColor;
-            combineText.Color = darkColor;
-        }
-        else
-        {
-            combineButton.Color = darkColor;
-            combineText.Color = lightColor;
-        }
-        
-        if (discard)
-        {
-            discardButton.Color = lightColor;
-            DiscardText.Color = darkColor;
-        }
-        else
-        {
-            discardButton.Color = darkColor;
-            DiscardText.Color = lightColor;
-        }
-    }
 
-    /// <summary>
-    /// process input for moving through the inventory UI
-    /// </summary>
-    private void processInput()
-    {
-        if (inventoryVisible)
+        /// <summary>
+        /// moves all slots one to the left
+        /// </summary>
+        void MoveRight()
         {
+            if (!playerInventoryEmpty)
+            {
+                for (int i = 0; i < displayItems.Count; i++)
+                {
+                    displayItems[i]--;
+                }
+
+                ProcessSlots();
+                if (slots.Count is not 0)
+                {
+                    foreach (var s in slots)
+                    {
+                        s.MoveLeft();
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// moves all slots one to the right
+        /// </summary>
+        void MoveLeft()
+        {
+            if (!playerInventoryEmpty)
+            {
+                for (int i = 0; i < displayItems.Count; i++)
+                {
+                    displayItems[i]++;
+                }
+
+                ProcessSlots();
+                if (slots.Count is not 0)
+                {
+                    foreach (var s in slots)
+                    {
+                        s.MoveRight();
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// gets a value out of slots
+        /// </summary>
+        /// <param name="slot">the index to pull from</param>
+        /// <returns>the item index</returns>
+        public int GetIndex(int slot)
+        {
+            return displayItems[slot];
+        }
+
+        /// <summary>
+        /// reset the bulk of the data
+        /// </summary>
+        public void RefreshAll()
+        {
+            /*Chat gpt things these numbers are arbitrary... they arent lol*/
+            displayItems = new List<int>
+            {
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                7
+            };
+
+            //if player inventory is null for whatever reason (scene switching etc) then refresh the reference.
+            pInventory = pInventory ? pInventory : GameObject.FindObjectOfType<PlayerInventory>();
             
+            //set the player inventory
+            playerInventoryEmpty = (pInventory == null || pInventory.GetCount() == 0);
+            
+            //update all of the slots 
+            ProcessSlots();
 
-            if (Input.GetKeyUp(KeyCode.W))
+            //update each individual slot object
+            slots.ForEach(s => s.Refresh());
+        }
+
+        /// <summary>
+        /// update the current selection moving downward
+        /// </summary>
+        private void UpdateSelection()
+        {
+            //if the item is valid
+            if (currentItem == null) return;
+                if (currentSelection == 0) return;
+                    switch (currentSelection)
+                    {
+                        case InventoryUISelection.UseEquip:
+                            UpdateButtons(true, false, false);
+                            if (!currentItem.equippable && !currentItem.usable)
+                            {
+                                currentSelection++;
+                            }
+
+                            break;
+                        case InventoryUISelection.Discard:
+                            UpdateButtons(false, false, true);
+                            if (!currentItem.discardable)
+                            {
+                                currentSelection++;
+                            }
+
+                            break;
+                        case InventoryUISelection.Combine:
+                            UpdateButtons(false, true, false);
+                            if (!currentItem.combineable)
+                            {
+                                currentSelection++;
+                            }
+
+                            break;
+                        case InventoryUISelection.Def:
+                            currentSelection = InventoryUISelection.ScrollList;
+                            UpdateButtons(false, false, false);
+                            break;
+                        default:
+                            currentSelection = InventoryUISelection.ScrollList;
+                            UpdateButtons(false, false, false);
+                            break;
+                    }
+        }
+
+        /// <summary>
+        /// update the current selection, moving upward if the value is invalid
+        /// </summary>
+        private void UpdateSelectionUpward()
+        {
+            //if the item is valid
+            if (currentItem != null)
             {
+                if (currentSelection != 0)
+                {
+                    switch (currentSelection)
+                    {
+                        case InventoryUISelection.UseEquip:
+                            UpdateButtons(true, false, false);
+                            if (!currentItem.equippable && !currentItem.usable)
+                            {
+                                currentSelection--;
+                            }
+
+                            break;
+                        case InventoryUISelection.Discard:
+                            UpdateButtons(false, false, true);
+                            if (!currentItem.discardable)
+                            {
+                                currentSelection--;
+                            }
+
+                            break;
+                        case InventoryUISelection.Combine:
+                            UpdateButtons(false, true, false);
+                            if (!currentItem.combineable)
+                            {
+                                currentSelection--;
+                            }
+
+                            break;
+                        case InventoryUISelection.Def:
+                            currentSelection = InventoryUISelection.ScrollList;
+                            UpdateButtons(false, false, false);
+                            break;
+                        default:
+                            currentSelection = InventoryUISelection.ScrollList;
+                            UpdateButtons(false, false, false);
+                            break;
+                    }
+                }
+            }
+
+
+        }
+
+        /// <summary>
+        /// update the buttons visibility for current selection
+        /// </summary>
+        /// <param name="equipUse"></param>
+        /// <param name="comb"></param>
+        /// <param name="disc"></param>
+        private void UpdateButtons(bool equipUse, bool comb, bool disc)
+        {
+            AdjustButtonColors(equipUse,useEquip);
+            AdjustButtonColors(comb,combine);
+            AdjustButtonColors(disc,discard);
+        }
+
+        /// <summary>
+        /// adjusts the colors for a single button/text pair
+        /// </summary>
+        /// <param name="flag">whether that particular thing is enabled</param>
+        /// <param name="n">the button to adjust</param>
+        private void AdjustButtonColors(bool flag, UINode n)
+        {
+            if (flag)
+            {
+                n.SetColors(LightColor,DarkColor);
+            }
+            else
+            {
+                n.SetColors(DarkColor,LightColor);
+            }
+        }
+
+        /// <summary>
+        /// move the current selection down
+        /// </summary>
+        public void ScrollDown()
+        {
+            if (inventoryVisible)
+            {
+                currentSelection++;
+                UpdateSelection();
+            }
+        }
+
+        /// <summary>
+        /// move the current selection up
+        /// </summary>
+        public void ScrollUp()
+        {
+            if (inventoryVisible)
+            {
+                currentSelection--;
+                UpdateSelectionUpward();
+            }
+        }
+
+        /// <summary>
+        /// scroll right
+        /// </summary>
+        public void ScrollInventoryRight()
+        {
+            if (currentSelection == InventoryUISelection.ScrollList && inventoryVisible)
+            {
+                MoveRight();
+            }
+        }
+
+        /// <summary>
+        /// scroll left
+        /// </summary>
+        public void ScrollInventoryLeft()
+        {
+            if (currentSelection == InventoryUISelection.ScrollList && inventoryVisible)
+            {
+                MoveLeft();
+            }
+        }
+
+        /// <summary>
+        /// do the inventory action as determined by what is being pressed
+        /// </summary>
+        public void InventoryAction()
+        {
+
+            switch (currentSelection)
+            {
+                case InventoryUISelection.UseEquip:
+                    if (currentItem.equippable)
+                    {
+                        //item is equitable
+                        pInventory.equippedIndex = pInventory.FindItemIndex(currentItem);
+                    }
+                    else
+                    {
+                        if (currentItem.usable)
+                        {
+                            //item is usable
+                        }
+                    }
+
+                    break;
+                case InventoryUISelection.Discard:
+                    pInventory.RemoveItem(currentItem);
+                    RefreshAll();
+                    break;
                 
+                case InventoryUISelection.Combine:
+                    break;
+                
+                case InventoryUISelection.ScrollList:
+                    currentSelection = InventoryUISelection.UseEquip;
+                    UpdateSelection();
+                    break;
             }
 
-            if (currentSelection == InventoryUISelection.ScrollList)
-            {
-                if (Input.GetKeyUp(KeyCode.D))
-                {
-                    moveRight();
-                }
-
-                if (Input.GetKeyUp(KeyCode.A))
-                {
-                    moveLeft();
-                }
-            }
         }
-    }
 
-    public void scrollDown()
-    {
-        if (inventoryVisible)
+        /// <summary>
+        /// responds the the Inventory Button Event
+        /// </summary>
+        public void OpenCloseInventory()
         {
-            currentSelection++;
-            updateSelection();
-        }
-    }
-
-    public void scrollUp()
-    {
-        if (inventoryVisible)
-        {
-            Debug.Log("up");
-            currentSelection--;
-            updateSelectionUpward();
-        }
-    }
-
-    public void scrollInventoryRight()
-    {
-        if (currentSelection == InventoryUISelection.ScrollList && inventoryVisible)
-        {
-            moveRight();
-        }
-    }
-    
-    public void scrollInventoryLeft()
-    {
-        if (currentSelection == InventoryUISelection.ScrollList && inventoryVisible)
-        {
-            moveLeft();
-        }
-    }
-    
-    /// <summary>
-    /// do the inventory action as determined by what is being pressed
-    /// </summary>
-    public void inventoryAction()
-    {
-        
-        switch (currentSelection)
-        {
-            case InventoryUISelection.UseEquip:
-                break;
-            case InventoryUISelection.Discard:
-                p_inventory.removeItem(CurrentItem);
-                RefreshAll();
-                break;
-            case InventoryUISelection.Combine:
-                break;
-            case InventoryUISelection.ScrollList:
-                currentSelection = InventoryUISelection.UseEquip;
-                updateSelection();
-                break;
-        }
-        
-    }
-
-
-    public void openCloseInventory()
-    {
-        //open and close the inventory
-        if (Input.GetKeyUp(KeyCode.Tab))
-        {
+            Debug.Log("inventory");
             inventoryVisible = !inventoryVisible;
             if (inventoryVisible)
             {
@@ -451,15 +423,14 @@ public class inventoryUIManager : MonoBehaviour
             }
         }
     }
+
+    public enum InventoryUISelection
+    {
+        ScrollList = 0,
+        UseEquip = 1,
+        Combine = 2,
+        Discard = 3,
+        Def = 4
+    }
 }
 
-
-
-public enum InventoryUISelection
-{
-    ScrollList = 0,
-    UseEquip = 1,
-    Combine = 2,
-    Discard = 3,
-    Def = 4
-}

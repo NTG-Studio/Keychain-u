@@ -1,26 +1,25 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class cameraManager : MonoBehaviour
+namespace Player
 {
-    public GameObject currentCamera;
+    public class CameraManager : MonoBehaviour
+    {
+        public GameObject currentCamera;
    
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "camZone")
+        private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("hit " + other.name );
-            cameraZone zone = other.gameObject.GetComponent<cameraZone>();
-            if (currentCamera != null)
+            if (other.CompareTag("camZone"))
             {
-                currentCamera.SetActive(false);
-            }
+                CameraZone zone = other.gameObject.GetComponent<CameraZone>();
+                if (currentCamera != null)
+                {
+                    currentCamera.SetActive(false);
+                }
 
-            currentCamera = zone.affectedCamera;
-            currentCamera.SetActive(true);
+                currentCamera = zone.affectedCamera;
+                currentCamera.SetActive(true);
+            }
         }
     }
 }
