@@ -53,7 +53,7 @@ namespace UI.Inventory
             else
             {
                 UpdateSelectionUpward();
-            }
+            } 
         }
 
         /// <summary>
@@ -260,7 +260,7 @@ namespace UI.Inventory
                             UpdateButtons(true, false, false);
                             if (!currentItem.equippable && !currentItem.usable)
                             {
-                                currentSelection--;
+                                currentSelection--;  // Decrement to move up
                             }
 
                             break;
@@ -268,7 +268,7 @@ namespace UI.Inventory
                             UpdateButtons(false, false, true);
                             if (!currentItem.discardable)
                             {
-                                currentSelection--;
+                                currentSelection--;  // Decrement to move up
                             }
 
                             break;
@@ -276,7 +276,7 @@ namespace UI.Inventory
                             UpdateButtons(false, true, false);
                             if (!currentItem.combineable)
                             {
-                                currentSelection--;
+                                currentSelection--;  // Decrement to move up
                             }
 
                             break;
@@ -291,8 +291,6 @@ namespace UI.Inventory
                     }
                 }
             }
-
-
         }
 
         /// <summary>
@@ -332,8 +330,9 @@ namespace UI.Inventory
         {
             if (inventoryVisible)
             {
-                currentSelection++;
-                UpdateSelection();
+                //currentSelection++;
+                //UpdateSelection();
+                VerticalScroll(false);
             }
         }
 
@@ -344,8 +343,9 @@ namespace UI.Inventory
         {
             if (inventoryVisible)
             {
-                currentSelection--;
-                UpdateSelectionUpward();
+                //currentSelection--;
+                //UpdateSelectionUpward();
+                VerticalScroll(true);
             }
         }
 
@@ -421,6 +421,49 @@ namespace UI.Inventory
             {
                 currentSelection = 0;
             }
+        }
+
+        public void VerticalScroll(bool isUp = false)
+        {
+            if (currentItem is null) return;
+
+            int selection = (int)currentSelection;
+            int originalSelection = selection;
+            bool[] options = getOptions(currentItem.usable, currentItem.combineable, currentItem.discardable);
+
+            do
+            {
+                if (isUp)
+                {
+                    selection--;  // Decrement to move up
+                    if (selection < 0)
+                    {
+                        selection = options.Length - 1;
+                    }
+                }
+                else
+                {
+                    selection = (selection + 1) % options.Length;
+                }
+
+                //break the loop if we have done a full lap
+                if (selection == originalSelection)
+                    break;
+
+            } while (!options[selection] && selection != 0);  // Ensure we can land on 0 (ScrollList) even if its options flag is false
+
+            currentSelection = (InventoryUISelection)selection;
+        }
+
+        public bool[] getOptions(bool canUse, bool canCombine, bool canDiscard)
+        {
+            return new bool[4]
+            {
+                true,
+                canUse,
+                canCombine,
+                canDiscard
+            };
         }
     }
 
