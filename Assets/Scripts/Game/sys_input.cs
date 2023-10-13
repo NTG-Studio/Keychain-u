@@ -18,6 +18,9 @@ namespace Game
         public UnityEvent left;
         public UnityEvent down;
 
+        public UnityEvent rightShoulder;
+        public UnityEvent leftShoulder;
+
         private void Start()
         {
             if (Instance == null)
@@ -87,6 +90,22 @@ namespace Game
             if (down !=null && context.phase == InputActionPhase.Performed)
             {
                 down.Invoke();
+            }
+        }
+        
+        public void OnRightShoulder(InputAction.CallbackContext context)
+        {
+            if (down !=null && context.phase == InputActionPhase.Performed)
+            {
+                rightShoulder.Invoke();
+            }
+        }
+        
+        public void OnLeftShoulder(InputAction.CallbackContext context)
+        {
+            if (down !=null && context.phase == InputActionPhase.Performed)
+            {
+                leftShoulder.Invoke();
             }
         }
     }
