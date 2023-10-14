@@ -5,6 +5,11 @@ using UnityEngine;
 public class PauseFSM : FiniteStateMachine<PauseStates>
 {
     [SerializeField] private Animator uiAnim;
+
+    public AudioSource openSound;
+    public AudioSource closeSound;
+    public AudioSource tabSound;
+    
     public override void initializeFSM()
     {
         //set up all of our states

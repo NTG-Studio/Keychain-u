@@ -25,17 +25,21 @@ public class inventoryState : FiniteState<PauseStates>
 
     public override void process_input(InputType type)
     {
+        PauseFSM i = _master as PauseFSM;
         if (type == InputType.Pause)
         {
+            i.closeSound.Play();
             NextState(PauseStates.Hidden);
         }
         
         if (type == InputType.LeftShoulder)
         {
+            i.tabSound.Play();
             NextState(PauseStates.Map);
         }
         if (type == InputType.RightShoulder)
         {
+            i.tabSound.Play();
             NextState(PauseStates.Journal);
         }
     }

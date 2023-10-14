@@ -22,8 +22,10 @@ public class HiddenState : FiniteState<PauseStates>
 
     public override void process_input(InputType type)
     {
+        PauseFSM i = _master as PauseFSM;
         if (type == InputType.Pause)
         {
+            i.openSound.Play();
             NextState(PauseStates.Inventory);
         }
     }

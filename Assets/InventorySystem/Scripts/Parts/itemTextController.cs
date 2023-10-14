@@ -13,10 +13,13 @@ public class ItemTextController : MonoBehaviour
     
     private static readonly Color visible = new Color(1, 1, 1, 1);
     private static readonly Color hidden = new Color(1, 1, 1, 0);
+
+    public playerInventory inventory;
     // Start is called before the first frame update
     void Start()
     {
         transform.position = transformTargets[targetIndex].position;
+        inventory = GameObject.FindObjectOfType<playerInventory>();
     }
 
     // Update is called once per frame
@@ -30,6 +33,7 @@ public class ItemTextController : MonoBehaviour
         ClampIndex();
         UpdatePosition();
         AdjustOpacity();
+        updateText();
     }
     
     /// <summary>
@@ -52,7 +56,7 @@ public class ItemTextController : MonoBehaviour
     {
         transform.position = MyMath.SmoothLerp(transform.position, transformTargets[targetIndex].position, 25f);
     }
-    
+
     void AdjustOpacity()
     {
         if (targetIndex == 8 || targetIndex == 0)
@@ -63,7 +67,16 @@ public class ItemTextController : MonoBehaviour
         {
             uiBlock.Color = MyMath.SmoothLerp(uiBlock.Color, visible, 25f);
         }
-    }
+
+        if (targetIndex == 5)
+        {
+            transform.localScale = MyMath.SmoothLerp(transform.localScale, new Vector3(1.5f, 1.5f, 1.5f), 25f);
+        }
+        else
+        {
+            transform.localScale = MyMath.SmoothLerp(transform.localScale, new Vector3(.8f, .8f, .8f), 25f);
+        }
+}
 
     [Button]
     public void MoveForward()
@@ -75,5 +88,10 @@ public class ItemTextController : MonoBehaviour
     public void MoveBack()
     {
         targetIndex--;
+    }
+
+    public void updateText()
+    {
+        uiBlock.Text = inventory.inventory[inventory.slots[targetIndex]].itm.itemName;
     }
 }

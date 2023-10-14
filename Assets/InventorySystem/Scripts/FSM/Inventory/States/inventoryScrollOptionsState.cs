@@ -30,14 +30,18 @@ public class inventoryScrollOptionsState : FiniteState<InventoryStates>
 
     public override void process_input(InputType type)
     {
+        inventoryFSM i = _master as inventoryFSM;
         switch (type)
         {
             case InputType.Right:
+                i.leftRightSound.Play();
                 NextState(InventoryStates.ScrollItems);
                 break;
             case InputType.Up:
+                i.upDownSound.Play();
                 break;
             case InputType.Down:
+                i.upDownSound.Play();
                 break;
         }
     }

@@ -6,6 +6,10 @@ using UnityEngine;
 public class inventoryFSM : FiniteStateMachine<InventoryStates>
 {
     private PauseFSM parentFSM;
+
+    public AudioSource leftRightSound;
+    public AudioSource upDownSound;
+    public AudioSource useSound;
     public override void initializeFSM()
     {
         States = new Dictionary<InventoryStates, FiniteState<InventoryStates>>();
